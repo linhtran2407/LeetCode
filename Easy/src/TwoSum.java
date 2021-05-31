@@ -32,7 +32,7 @@ public class TwoSum {
         for (int i=0; i<nums.length; i++){
             int other = target - nums[i];
             // let the key be the value in the arr,
-            // i be the index of that value in the arr
+            // value be the index of that key in the arr
             map.put(nums[i], i);
 
             if (map.containsKey(other)){
