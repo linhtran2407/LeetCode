@@ -12,14 +12,14 @@ public class ValidPalindromeII {
         if (s.length() <=1) return true;
         int i=0;
         int j= s.length()-1;
-        int count = 0;
+        int count = 0; // count the number of Char being deleted, which is at most 1
         return isPalindrome(s, i, j, count);
     }
 
     private boolean isPalindrome (String s, int i, int j, int count){
         while(i<j){
             if (s.charAt(i) != s.charAt(j)){
-                if (count == 1) {
+                if (count == 1) { // if delete already, return false
                     return false;
                 } else {
                     count++;
