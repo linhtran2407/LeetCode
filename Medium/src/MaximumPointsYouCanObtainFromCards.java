@@ -37,4 +37,38 @@ public class MaximumPointsYouCanObtainFromCards {
         }
         return result;
     }
+
+    /* LeetCode solution: Sliding window
+    Runtime: 5 ms, faster than 8.62% of Java online submissions for Maximum Points You Can Obtain from Cards.
+    Memory Usage: 61.9 MB, less than 6.90% of Java online submissions for Maximum Points You Can Obtain from Cards.
+     */
+    public int maxScore_Slidingwindow(int[] cardPoints, int k) {
+        int total = 0;
+        int n = cardPoints.length;
+        int subLength = 0;
+        int requiredLength = n-k;
+        int currSubScore = 0;
+        int minSubScore = 0;
+        int startIndex = 0;
+
+        // total score of the card points
+        for (int i: cardPoints){
+            total += i;
+        }
+
+        minSubScore = total;
+        if (k==n) {return total;}
+
+        for (int i=0; i<n; i++){
+            currSubScore += cardPoints[i];
+            subLength = i-startIndex+1;
+
+            if (subLength == requiredLength){
+                minSubScore = Math.min(minSubScore, currSubScore);
+                currSubScore -= cardPoints[startIndex++];
+            }
+        }
+
+        return total-minSubScore;
+    }
 }
