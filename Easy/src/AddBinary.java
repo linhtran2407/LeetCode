@@ -45,6 +45,8 @@ public class AddBinary {
     Follow up question: what if we cannot use addition (+) ?
     Answer: Bit manipulation
 
+    Idea explanation in a well-made vid: https://www.youtube.com/watch?v=qq64FrA2UXQ
+
     Runtime: 6 ms, faster than 17.82% of Java online submissions for Add Binary.
     Memory Usage: 39 MB, less than 41.62% of Java online submissions for Add Binary.
      */
