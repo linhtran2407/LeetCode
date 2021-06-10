@@ -1,3 +1,5 @@
+import java.math.BigInteger;
+
 public class AddBinary {
 
     /*
@@ -38,4 +40,30 @@ public class AddBinary {
         if (carry == 1){sb.append(carry);}
         return sb.reverse().toString();
     }
+
+    /*
+    Follow up question: what if we cannot use addition (+) ?
+    Answer: Bit manipulation
+
+    Runtime: 6 ms, faster than 17.82% of Java online submissions for Add Binary.
+    Memory Usage: 39 MB, less than 41.62% of Java online submissions for Add Binary.
+     */
+    public String addBinary_BitManipulation(String a, String b) {
+        BigInteger x = new BigInteger(a, 2);
+        BigInteger y = new BigInteger(b, 2);
+        BigInteger zero = new BigInteger("0", 2); // used to define when carry is 0 or not
+        BigInteger sum, carry; // hold the sum without carries and the carries
+
+        while (y.compareTo(zero) != 0) {
+            // while there is still carry to move on
+            sum = x.xor(y); // xor (^) helps to calculate the sum without carry
+            carry = x.and(y).shiftLeft(1); // and (&) helps to calculate the carries
+
+            x = sum;
+            y = carry;
+        }
+
+        return x.toString(2);
+    }
+
 }
