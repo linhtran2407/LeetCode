@@ -6,7 +6,7 @@ import java.util.Queue;
 
 /*
     @author: Linh Tran
-    @version: May 31, 2021
+    @version: Jun 10th, 2021
 
     Runtime and usage info of the first solution:
     Runtime: 1 ms, faster than 76.08% of Java online submissions for Binary Tree Right Side View.
