@@ -2,7 +2,14 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class AddToArrayFormOfInteger {
+    /*
+        @author: Linh Tran
+        @version: Jun 6th, 2021
 
+        Runtime and usage info of the first solution:
+        Runtime: 3 ms, faster than 94.17% of Java online submissions for Add to Array-Form of Integer.
+        Memory Usage: 40.5 MB, less than 52.70% of Java online submissions for Add to Array-Form of Integer.
+     */
     public List<Integer> addToArrayForm(int[] num, int k) {
         List<Integer> res = new ArrayList<>();
         int carry = 0;
