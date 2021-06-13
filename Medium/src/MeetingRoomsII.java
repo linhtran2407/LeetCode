@@ -17,6 +17,15 @@ Constraints:
 0 <= starti < endi <= 106
  */
 
+/*
+    @author: https://leetcode.com/supunwijerathne/
+    @version: Jun 10th, 2021
+
+    Runtime and usage info of the first solution:
+    Runtime: 7 ms, faster than 45.40% of Java online submissions for Meeting Rooms II.
+    Memory Usage: 38.6 MB, less than 85.80% of Java online submissions for Meeting Rooms II.
+*/
+
 import java.util.Arrays;
 import java.util.Comparator;
 import java.util.PriorityQueue;
