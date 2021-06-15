@@ -1,5 +1,5 @@
 import java.util.HashMap;
-
+//Token: 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
 /**
  * Problem:
  *
@@ -13,6 +13,9 @@ public class LongestSubStringKDistinct {
 
         String str = "ghijkm";
         System.out.println(findLength(str, str.length()));
+
+        String st = "linhh";
+        System.out.println(findLength(st, 2));
     }
 
     private static int findLength(String s, int k) {
