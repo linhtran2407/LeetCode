@@ -1,4 +1,4 @@
-/*
+/**
 Problem:
 
 Given an array of integers, return the size of the smallest subarray that has the sum >= a specific K
