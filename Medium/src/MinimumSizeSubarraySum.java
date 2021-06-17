@@ -1,3 +1,6 @@
+import java.util.HashMap;
+import java.util.Map;
+
 public class MinimumSizeSubarraySum {
 
     /*
@@ -26,5 +29,30 @@ public class MinimumSizeSubarraySum {
         }
 
         return minLen != Integer.MAX_VALUE? minLen : 0;
+    }
+
+    // Optimized sliding window
+    public int lengthOfLongestSubstring2(String s) {
+        if (s.length() ==0){return 0;}
+
+        int result = 0;
+        Map<Character, Integer> map = new HashMap<>();
+
+        for (int start=0, end=0; start<s.length() && end<s.length(); end++) {
+            if (map.containsKey(s.charAt(end))) {
+                // we want start index to be the the next index after
+                // the index of the repeated char we found
+                // but that at least has to be greater from the current
+                // start, if any, so that we can consider the remaining chars
+                // in the string instead of considering backwards
+                start = Math.max(start, map.get(s.charAt(end)) +1);
+            }
+
+            map.put(s.charAt(end), end);
+            result = Math.max(result, end-start+1);
+
+        }
+
+        return result;
     }
 }
