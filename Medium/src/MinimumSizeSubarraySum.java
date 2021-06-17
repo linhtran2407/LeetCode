@@ -11,7 +11,6 @@ public class MinimumSizeSubarraySum {
 
     public int minSubArrayLen(int target, int[] nums) {
         // TC: O(N)
-
         int windowStart = 0;
         int minLen = Integer.MAX_VALUE;
         int sum = 0;
