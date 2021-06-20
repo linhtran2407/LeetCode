@@ -47,4 +47,30 @@ public class MergeIntervals {
         return (Math.max(itv1[0], itv2[0]) <= Math.min(itv1[1], itv2[1]));
     }
 
+    /** Alternative solution by LeetCode
+     public int[][] merge(int[][] intervals)  {
+         // Idea: check for overlap of adjacent interval in the list
+         // and merge as much as possible
+
+         // 1. sort array based on starting point: O(nlogn)
+         Arrays.sort(intervals, Comparator.comparingInt(i -> i[0]));
+
+         // Use linked list because we always add to the end, which is easy
+         // to do with LL
+         LinkedList<int[]> merged = new LinkedList<>();
+
+         // 2. loop and check neighboring interval: O(n)
+         for (int[] interval: intervals) {
+         // if empty or not overlap
+             if (merged.isEmpty() || merged.getLast()[1] < interval[0]) {
+                merged.add(interval);
+             } else { // if overlap
+                merged.getLast()[1] = Math.max(merged.getLast()[1], interval[1]);
+             }
+         }
+
+         return merged.toArray(new int[merged.size()][2]);
+     }
+     */
+
 }
