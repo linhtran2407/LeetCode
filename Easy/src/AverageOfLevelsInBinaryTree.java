@@ -9,7 +9,7 @@ public class AverageOfLevelsInBinaryTree {
     @author: Linh Tran
     @version: Jun 20th, 2021
 
-    Runtime and usage info of the iterative solution:
+    Runtime and usage info of the solution:
     Runtime: 2 ms, faster than 82.88% of Java online submissions for Average of Levels in Binary Tree.
     Memory Usage: 40.8 MB, less than 78.58% of Java online submissions for Average of Levels in Binary Tree.
     */

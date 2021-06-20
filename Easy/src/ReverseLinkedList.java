@@ -4,7 +4,7 @@ public class ReverseLinkedList {
     @author: Linh Tran
     @version: Jun 18th, 2021
 
-    Runtime and usage info of the iterative solution:
+    Runtime and usage info of the solution:
     Runtime: 0 ms, faster than 100.00% of Java online submissions for Reverse Linked List.
     Memory Usage: 38.9 MB, less than 33.47% of Java online submissions for Reverse Linked List.
     */

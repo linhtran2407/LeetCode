@@ -4,7 +4,7 @@ public class MedianOfTwoSortedArrays {
     @author: Linh Tran
     @version: Jun 18th, 2021
 
-    Runtime and usage info of the first solution:
+    Runtime and usage info of the solution:
     Runtime: 2 ms, faster than 99.85% of Java online submissions for Median of Two Sorted Arrays.
     Memory Usage: 39.8 MB, less than 96.59% of Java online submissions for Median of Two Sorted Arrays.
     */
