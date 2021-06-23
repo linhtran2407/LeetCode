@@ -4,7 +4,7 @@ public class AddTwoNumbers {
     @author: Linh Tran
     @version: Jun 11th, 2021
 
-    Runtime and usage info of the first solution:
+    Runtime and usage info of the solution:
     Runtime: 2 ms, faster than 77.74% of Java online submissions for Add Two Numbers.
     Memory Usage: 39.4 MB, less than 45.44% of Java online submissions for Add Two Numbers.
 */
