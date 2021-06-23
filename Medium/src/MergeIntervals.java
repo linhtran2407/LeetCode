@@ -3,7 +3,7 @@ import java.util.Comparator;
 
 public class MergeIntervals {
 
-    /*
+/*
     @author: Linh Tran
     @version: June 6th, 2021
     Runtime and usage info:
