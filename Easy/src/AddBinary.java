@@ -2,7 +2,7 @@ import java.math.BigInteger;
 
 public class AddBinary {
 
-    /*
+/*
     @author: Linh Tran
     @version: Jun 10th, 2021
 
