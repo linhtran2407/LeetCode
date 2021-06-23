@@ -7,7 +7,7 @@ public class MinimumSizeSubarraySum {
     @author: Linh Tran
     @version: Jun 17th, 2021
 
-    Runtime and usage info of the first solution:
+    Runtime and usage info of the second solution:
     Runtime: 1 ms, faster than 99.97% of Java online submissions for Minimum Size Subarray Sum.
     Memory Usage: 39.3 MB, less than 25.84% of Java online submissions for Minimum Size Subarray Sum.
 */
