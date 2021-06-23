@@ -2,7 +2,6 @@ import java.util.HashMap;
 
 /**
  * Problem:
- *
  * Given a String, return the length of the longest substring with K distinct characters
  */
 
