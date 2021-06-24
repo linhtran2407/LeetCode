@@ -1,3 +1,6 @@
+import java.util.LinkedList;
+import java.util.Queue;
+
 public class NumberOfIslands {
     /*
     @author: Linh Tran
@@ -8,8 +11,8 @@ public class NumberOfIslands {
     Memory Usage: 41.5 MB, less than 55.82% of Java online submissions for Number of Islands.
 
     Runtime and usage info of BFS solution:
-    Runtime: 25 ms, faster than 89.57% of Java online submissions for Clone Graph.
-    Memory Usage: 39.2 MB, less than 44.38% of Java online submissions for Clone Graph.
+    Runtime: 4 ms, faster than 21.07% of Java online submissions for Number of Islands.
+    Memory Usage: 41.3 MB, less than 66.47% of Java online submissions for Number of Islands.
 */
 
     /** DFS solution */
@@ -49,6 +52,52 @@ public class NumberOfIslands {
         dfs(grid, row, col-1);
     }
 
+    /** BFS solution */
+    public int numIslands_BFS(char[][] grid) {
+        // O(N*M)
+        // Linear scan the 2d grid map, if a node contains a '1', then it is a root node that triggers a Breadth First Search. Put it into a queue and set its value as '0' to mark as visited node. Iteratively search the neighbors of enqueued nodes until the queue becomes empty.
 
+        Queue<int[]> neighbors = new LinkedList<>();
+        int rows = grid.length;
+        int cols = grid[0].length;
+        int count = 0;
 
+        for (int r=0; r<rows; r++) {
+            for (int c=0; c<cols; c++) {
+                if (grid[r][c] == '1') {
+                    count++;
+                    grid[r][c] = '0'; // mark as visited
+                    neighbors.add(new int[]{r, c}); // put into the queue
+                }
+
+                while (!neighbors.isEmpty()) {
+                    int[] curr = neighbors.remove();
+                    int currRow = curr[0];
+                    int currCol = curr[1];
+
+                    if (currRow>0 && grid[currRow-1][currCol] == '1') {
+                        grid[currRow-1][currCol] = '0';
+                        neighbors.add(new int[]{currRow-1, currCol});
+                    }
+
+                    if (currRow<rows-1 && grid[currRow+1][currCol] == '1') {
+                        grid[currRow+1][currCol] = '0';
+                        neighbors.add(new int[]{currRow+1, currCol});
+                    }
+
+                    if (currCol>0 && grid[currRow][currCol-1] == '1') {
+                        grid[currRow][currCol-1] = '0';
+                        neighbors.add(new int[] {currRow, currCol-1});
+                    }
+
+                    if (currCol<cols-1 && grid[currRow][currCol+1] == '1') {
+                        grid[currRow][currCol+1] = '0';
+                        neighbors.add(new int[] {currRow, currCol+1});
+                    }
+                }
+            }
+        }
+
+        return count;
+    }
 }
