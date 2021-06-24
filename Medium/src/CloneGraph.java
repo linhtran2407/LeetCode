@@ -1,6 +1,4 @@
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
+import java.util.*;
 
 public class CloneGraph {
     /*
@@ -10,6 +8,10 @@ public class CloneGraph {
     Runtime and usage info of DFS solution:
     Runtime: 25 ms, faster than 89.57% of Java online submissions for Clone Graph.
     Memory Usage: 38.9 MB, less than 90.14% of Java online submissions for Clone Graph.
+
+    Runtime and usage info of BFS solution:
+    Runtime: 25 ms, faster than 89.57% of Java online submissions for Clone Graph.
+    Memory Usage: 39.2 MB, less than 44.38% of Java online submissions for Clone Graph.
 */
 
 // Definition for a Node.
@@ -34,7 +36,7 @@ public class CloneGraph {
     HashMap<Node, Node> visited = new HashMap<>();
 
     /** DFS solution*/
-    public Node cloneGraph(Node node) {
+    public Node cloneGraph_DFS(Node node) {
         if (node == null) {return null;}
 
         // base case: if a node is visited, return its clone
@@ -46,9 +48,41 @@ public class CloneGraph {
         visited.put(node, clone);
 
         for (Node neighbor: node.neighbors) {
-            clone.neighbors.add(cloneGraph(neighbor));
+            clone.neighbors.add(cloneGraph_DFS(neighbor));
         }
 
         return clone;
+    }
+
+    /** BFS solution */
+    public Node cloneGraph_BFS(Node node) {
+        if (node == null) {return null;}
+
+        // store current node as key and its clone as value
+        HashMap<Node, Node> visited = new HashMap<>();
+        Deque<Node> dq = new ArrayDeque<>();
+
+        // add and clone the first node
+        dq.add(node);
+        Node clone = new Node(node.val);
+        visited.put(node, clone);
+
+        while(!dq.isEmpty()) {
+            Node curr = dq.poll();
+
+            for (Node nb: curr.neighbors) {
+                if (!visited.containsKey(nb)) {
+                    visited.put(nb, new Node(nb.val));
+                    dq.add(nb);
+                }
+
+                // add cloned neighbors to the current clone node
+                Node currClone = visited.get(curr);
+                Node currCloneNb = visited.get(nb);
+                currClone.neighbors.add(currCloneNb);
+            }
+        }
+
+        return visited.get(node);
     }
 }
