@@ -3,6 +3,7 @@ import java.util.ArrayList;
 /*
     @author: Linh Tran
     @version: May 30, 2021
+
     Runtime and usage info:
     Runtime: 1 ms, faster than 44.11% of Java online submissions for Verifying an Alien Dictionary.
     Memory Usage: 39.2 MB, less than 7.43% of Java online submissions for Verifying an Alien Dictionary.
