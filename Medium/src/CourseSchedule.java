@@ -63,7 +63,6 @@ public class CourseSchedule {
                 }
             }
         }
-
         return removedEdges!=totalEdges? false:true;
     }
 
