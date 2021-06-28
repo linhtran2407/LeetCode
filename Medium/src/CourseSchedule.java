@@ -3,12 +3,12 @@ import java.util.LinkedList;
 import java.util.Map;
 
 /*
-@author: Linh Tran
-@version: Jun 28, 2021
+    @author: Linh Tran
+    @version: Jun 28, 2021
 
-Runtime and usage info:
-Runtime: 6 ms, faster than 41.69% of Java online submissions for Course Schedule.
-Memory Usage: 39.7 MB, less than 48.24% of Java online submissions for Course Schedule.
+    Runtime and usage info:
+    Runtime: 6 ms, faster than 41.69% of Java online submissions for Course Schedule.
+    Memory Usage: 39.7 MB, less than 48.24% of Java online submissions for Course Schedule.
 */
 
 class NodeInfo {
