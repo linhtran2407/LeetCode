@@ -11,6 +11,10 @@ import java.util.Map;
     Memory Usage: 39.7 MB, less than 48.24% of Java online submissions for Course Schedule.
 */
 
+
+/**
+ * LeetCode solution:
+ */
 class NodeInfo {
     public int indegrees = 0;
     public LinkedList<Integer> dependencies = new LinkedList<>();
