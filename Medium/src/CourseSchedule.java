@@ -1,6 +1,4 @@
-import java.util.HashMap;
-import java.util.LinkedList;
-import java.util.Map;
+import java.util.*;
 
 /*
     @author: Linh Tran
@@ -11,6 +9,67 @@ import java.util.Map;
     Memory Usage: 39.7 MB, less than 48.24% of Java online submissions for Course Schedule.
 */
 
+class Solution {
+    public boolean canFinish(int numCourses, int[][] prerequisites) {
+        /** algo topological sort:
+         build a graph: O(|E|)
+         indegree - the number of incoming egdes of each node
+         set of 0-indegree nodes
+
+         while(set is not empty){ // O(|E|+|V|)
+         remove the 0-indegree node N
+         traverse through N's list of dependencies <--
+         for each of dependency, decrement its incoming edge by 1
+         if a dependency's indegree is 0, add it to the set
+         }
+
+         if (number of edges removed is not equal to the prereq.length)--> cycle
+         otherwise no cycle --> return true
+         */
+
+        // key: course -> val: list of dependencies
+        HashMap<Integer, ArrayList<Integer>> courseDict = new HashMap<>();
+        // track node's indegree
+        int[] indegrees = new int[numCourses];
+        // set containing 0-indegree nodes, use LL bc of its O(1) for inserting and removing element
+        Queue<Integer> set = new LinkedList<>();
+
+        // build the graph
+        for (int[] relation: prerequisites){
+            // relation[1] --> relation[0]
+            var depList = courseDict.getOrDefault(relation[1], new ArrayList<Integer>());
+            depList.add(relation[0]);
+            courseDict.put(relation[1], depList);
+            indegrees[relation[0]]++;
+        }
+
+        // use topological sort
+        // create a set of 0-indegree nodes
+        for (int course=0; course<numCourses; course++){
+            if (indegrees[course] == 0){
+                set.add(course);
+            }
+        }
+
+        int totalEdge = prerequisites.length;
+        int removedEdge = 0;
+        while(!set.isEmpty()){
+            int currCourse = set.poll();
+            // traverse through the course's dependency list
+            if (courseDict.containsKey(currCourse)){
+                for (int dep: courseDict.get(currCourse)){
+                    indegrees[dep]--;
+                    removedEdge++;
+                    if (indegrees[dep] ==0){
+                        set.add(dep);
+                    }
+                }
+            }
+        }
+
+        return removedEdge == totalEdge;
+    }
+}
 
 /**
  * LeetCode solution:
