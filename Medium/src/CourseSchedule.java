@@ -17,10 +17,10 @@ class Solution {
          set of 0-indegree nodes
 
          while(set is not empty){ // O(|E|+|V|)
-         remove the 0-indegree node N
-         traverse through N's list of dependencies <--
-         for each of dependency, decrement its incoming edge by 1
-         if a dependency's indegree is 0, add it to the set
+             remove the 0-indegree node N
+             traverse through N's list of dependencies
+             for each of dependency, decrement its incoming edge by 1
+             if a dependency's indegree is 0, add it to the set
          }
 
          if (number of edges removed is not equal to the prereq.length)--> cycle
