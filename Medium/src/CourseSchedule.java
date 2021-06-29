@@ -5,6 +5,8 @@ import java.util.*;
     @version: Jun 28, 2021
 
     Runtime and usage info:
+    Runtime: 4 ms, faster than 69.53% of Java online submissions for Course Schedule.
+    Memory Usage: 39.5 MB, less than 72.28% of Java online submissions for Course Schedule.
     Runtime: 6 ms, faster than 41.69% of Java online submissions for Course Schedule.
     Memory Usage: 39.7 MB, less than 48.24% of Java online submissions for Course Schedule.
 */
