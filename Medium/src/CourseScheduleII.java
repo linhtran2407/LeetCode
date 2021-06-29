@@ -1,3 +1,5 @@
+import java.util.*;
+
 public class CourseScheduleII {
     /*
     @author: Linh Tran
