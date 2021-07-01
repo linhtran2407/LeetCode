@@ -69,15 +69,11 @@ public class EmployeeImportance {
     }
 
     private int calcImportance(HashMap<Integer, Employee> map, int id){
-        // base case
-        if (map.get(id).subordinates.size() == 0){
-            return map.get(id).importance;
-        }
-
         for (int subId: map.get(id).subordinates){
             map.get(id).importance += calcImportance(map, subId);
         }
 
+        // base case: return directly
         return map.get(id).importance;
     }
 }
