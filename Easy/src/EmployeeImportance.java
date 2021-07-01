@@ -5,6 +5,15 @@ import java.util.List;
 
 public class EmployeeImportance {
 
+        /*
+    @author: Linh Tran
+    @version: July 01, 2021
+
+    Runtime and usage info of the solution:
+    Runtime: 4 ms, faster than 98.26% of Java online submissions for Employee Importance.
+    Memory Usage: 40.6 MB, less than 35.96% of Java online submissions for Employee Importance.
+    */
+
     // Definition for Employee.
     class Employee {
         public int id;
