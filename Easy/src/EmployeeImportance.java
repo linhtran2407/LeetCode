@@ -31,6 +31,7 @@ public class EmployeeImportance {
 
             // key: id, val: Employee
             HashMap<Integer, Employee> map = new HashMap<>();
+
             // build the map
             for (Employee emp: employees){
                 map.put(emp.id, emp);
