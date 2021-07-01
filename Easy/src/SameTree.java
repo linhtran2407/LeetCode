@@ -1,5 +1,12 @@
 public class SameTree {
+    /*
+@author: Linh Tran
+@version: July 01, 2021
 
+Runtime and usage info of the solution:
+Runtime: 0 ms, faster than 100.00% of Java online submissions for Same Tree.
+Memory Usage: 36.3 MB, less than 74.07% of Java online submissions for Same Tree.
+*/
      //Definition for a binary tree node.
       public class TreeNode {
           int val;
