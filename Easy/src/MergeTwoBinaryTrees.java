@@ -3,6 +3,15 @@ import java.util.Deque;
 
 public class MergeTwoBinaryTrees {
 
+        /*
+    @author: Linh Tran
+    @version: July 03, 2021
+
+    Runtime and usage info of DFS solution:
+    Runtime: 0 ms, faster than 100.00% of Java online submissions for Merge Two Binary Trees.
+    Memory Usage: 38.9 MB, less than 91.48% of Java online submissions for Merge Two Binary Trees.
+*/
+
 
      // Definition for a binary tree node.
      public class TreeNode {
