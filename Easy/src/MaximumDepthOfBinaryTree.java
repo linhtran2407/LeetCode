@@ -1,5 +1,15 @@
 public class MaximumDepthOfBinaryTree {
 
+            /*
+    @author: Linh Tran
+    @version: July 03, 2021
+
+    Runtime and usage info of the solution:
+    Runtime: 0 ms, faster than 100.00% of Java online submissions for Maximum Depth of Binary Tree.
+    Memory Usage: 38.4 MB, less than 99.24% of Java online submissions for Maximum Depth of Binary Tree.
+*/
+
+
     // Definition for a binary tree node.
     public class TreeNode {
         int val;
