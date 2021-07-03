@@ -13,7 +13,7 @@ public class MergeTwoBinaryTrees {
     Runtime: 0 ms, faster than 100.00% of Java online submissions for Merge Two Binary Trees.
     Memory Usage: 38.9 MB, less than 91.48% of Java online submissions for Merge Two Binary Trees.
 
-    Runtime and usage info of DFS solution:
+    Runtime and usage info of BFS solution:
     Runtime: 1 ms, faster than 31.18% of Java online submissions for Merge Two Binary Trees.
     Memory Usage: 39 MB, less than 83.85% of Java online submissions for Merge Two Binary Trees.
 */
