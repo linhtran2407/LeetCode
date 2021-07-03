@@ -1,3 +1,5 @@
+import com.sun.source.tree.Tree;
+
 import java.util.ArrayDeque;
 import java.util.Deque;
 
@@ -10,6 +12,10 @@ public class MergeTwoBinaryTrees {
     Runtime and usage info of DFS solution:
     Runtime: 0 ms, faster than 100.00% of Java online submissions for Merge Two Binary Trees.
     Memory Usage: 38.9 MB, less than 91.48% of Java online submissions for Merge Two Binary Trees.
+
+    Runtime and usage info of DFS solution:
+    Runtime: 1 ms, faster than 31.18% of Java online submissions for Merge Two Binary Trees.
+    Memory Usage: 39 MB, less than 83.85% of Java online submissions for Merge Two Binary Trees.
 */
 
 
@@ -49,4 +55,40 @@ public class MergeTwoBinaryTrees {
         return root1;
     }
 
+    public TreeNode mergeTrees_BFS(TreeNode root1, TreeNode root2) {
+         if (root1 == null){
+             return root2;
+         }
+
+         // if root1 is not null and root2 is null, we ignore it, because we only return root1
+        // if both roots are not null, merge them
+        Deque<TreeNode[]> dq = new ArrayDeque<>();
+         dq.add(new TreeNode[]{root1, root2});
+
+         while(!dq.isEmpty()){
+             TreeNode[] curr = dq.poll();
+
+             // if root2 is null, as mentioned, we ignore it
+             if (curr[1] == null){
+                 continue;
+             }
+
+             // if both are not null, merge the vals
+             curr[0].val += curr[1].val;
+
+             if (curr[0].left == null){
+                 curr[0].left = curr[1].left;
+             } else {
+                 dq.add(new TreeNode[]{curr[0].left, curr[1].left});
+             }
+
+             if (curr[0].right == null){
+                 curr[0].right = curr[1].right;
+             } else {
+                 dq.add(new TreeNode[]{curr[0].right, curr[1].right});
+             }
+         }
+
+         return root1;
+    }
 }
