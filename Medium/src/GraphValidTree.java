@@ -2,6 +2,16 @@ import java.util.*;
 
 public class GraphValidTree {
 
+    /*
+    @author: Linh Tran
+    @version: July 04, 2021
+
+    Runtime and usage info of the solution:
+    Runtime: 5 ms, faster than 35.43% of Java online submissions for Graph Valid Tree.
+    Memory Usage: 39.9 MB, less than 37.43% of Java online submissions for Graph Valid Tree.
+*/
+
+
     class Solution {
         public boolean validTree(int n, int[][] edges) {
             // valid tree:
