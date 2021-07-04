@@ -56,6 +56,9 @@ public class GraphValidTree {
              *
              * TC: O(|V|+|E|) with V being the number of nodes and E being the number of edges
              * SC: O(|V|+|E|)
+             *
+             * The iterative BFS algorithm uses the exactly same algorithm, just different data
+             * structure (change stack in DFS into a queue (linkedlist) in BFS)
              */
 
             List<List<Integer>> adjList = new ArrayList<>();
