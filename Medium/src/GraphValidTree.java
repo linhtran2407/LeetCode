@@ -14,10 +14,10 @@ public class GraphValidTree {
 
     class Solution {
         public boolean validTree(int n, int[][] edges) {
-            // valid tree:
+            // valid tree means:
             // 1. connect: must be able to visit all node starting from 0
             // 2. no cycle: must not visit a node twice
-            // algo:
+            // iterative DFS algo:
             // build a adjacency list with node being the key and its neighbor list as the value
             // traverse through all nodes and its children, mark visited
             // if go to a node already visited, return false (cycle detected)
