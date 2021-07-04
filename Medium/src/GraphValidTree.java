@@ -131,6 +131,9 @@ public class GraphValidTree {
         // requires O(|E|*2) = O(|E|) because we have compare number of edges vs n-1
         // so at worst the number of edges (E) cannot exceed N
 
+        // again, as the first solution, this solution if using DFS, we just need
+        // to change the data structure being used: from queue to stack
+
         // TC: O(|V|)
         // SC: O(|V|)
 
