@@ -34,7 +34,7 @@ public class GraphValidTree {
     @author: Linh Tran
     @version: July 04, 2021
 
-    Runtime and usage info of the solution:
+    Runtime and usage info of the DFS solution:
     Runtime: 5 ms, faster than 35.43% of Java online submissions for Graph Valid Tree.
     Memory Usage: 39.9 MB, less than 37.43% of Java online submissions for Graph Valid Tree.
 */
@@ -45,15 +45,18 @@ public class GraphValidTree {
             // valid tree means:
             // 1. connect: must be able to visit all node starting from 0
             // 2. no cycle: must not visit a node twice
-            // iterative DFS algo:
-            // build a adjacency list with node being the key and its neighbor list as the value
-            // traverse through all nodes and its children, mark visited
-            // if go to a node already visited, return false (cycle detected)
-            // count the number of nodes visited starting from root
-            // if the count is not the same as n, return false
 
-            // TC: O(|V|+|E|)
-            // SC: O(|V|+|E|)
+
+            /** iterative DFS algo:
+             * build a adjacency list with node being the key and its neighbor list as the value
+             * traverse through all nodes and its children, mark visited
+             * if go to a node already visited, return false (cycle detected)
+             * count the number of nodes visited starting from root
+             * if the count is not the same as n, return false
+             *
+             * TC: O(|V|+|E|) with V being the number of nodes and E being the number of edges
+             * SC: O(|V|+|E|)
+             */
 
             List<List<Integer>> adjList = new ArrayList<>();
             // initialize each node with an empty adjency list
