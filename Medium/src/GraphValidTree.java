@@ -37,6 +37,10 @@ public class GraphValidTree {
     Runtime and usage info of the first solution:
     Runtime: 5 ms, faster than 35.43% of Java online submissions for Graph Valid Tree.
     Memory Usage: 39.9 MB, less than 37.43% of Java online submissions for Graph Valid Tree.
+
+    Runtime and usage info of the second solution:
+    Runtime: 2 ms, faster than 64.30% of Java online submissions for Graph Valid Tree.
+    Memory Usage: 39.6 MB, less than 77.63% of Java online submissions for Graph Valid Tree.
 */
 
 
