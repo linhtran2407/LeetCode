@@ -139,7 +139,7 @@ public class GraphValidTree {
         List<List<Integer>> adjList = new ArrayList<>();
         // initialize each node with an empty list of neighbors
         for (int i=0; i<n; i++){
-            adjList.add(new ArrayList<Integer>());
+            adjList.add(new ArrayList<>());
         }
 
         // build the adjacency list
