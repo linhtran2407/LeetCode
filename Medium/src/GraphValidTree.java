@@ -13,7 +13,11 @@ import java.util.*;
  *
  * Example 2:
  * Input: n = 5, edges = [[0,1],[1,2],[2,3],[1,3],[1,4]]
- * Output: false
+ * Output: false (because there is a cycle)
+ *
+ * Example 3:
+ * Input: n = 5, edges = [[0, 1],[1, 2],[3, 4]]
+ * OutputL false (because 2 nodes 3 and 4 are not connected to the remaining tree - i.e can't be visited from 0)
  *
  * Constraints:
      * 1 <= 2000 <= n
