@@ -6,7 +6,11 @@ public class InvertTree {
         @author: Linh Tran
         @version: July 05, 2021
 
-        Runtime and usage info of the solution:
+        Runtime and usage info of DFS solution:
+        Runtime: 0 ms, faster than 100.00% of Java online submissions for Invert Binary Tree.
+        Memory Usage: 36.4 MB, less than 67.35% of Java online submissions for Invert Binary Tree.
+
+        Runtime and usage info of BFS solution:
         Runtime: 0 ms, faster than 100.00% of Java online submissions for Invert Binary Tree.
         Memory Usage: 36.4 MB, less than 67.35% of Java online submissions for Invert Binary Tree.
     */
