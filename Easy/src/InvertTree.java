@@ -36,8 +36,8 @@ public class InvertTree {
                 return null;
             }
 
-            TreeNode cloneRight = invertTree(root.right);
-            TreeNode cloneLeft = invertTree(root.left);
+            TreeNode cloneRight = invertTree_DFS(root.right);
+            TreeNode cloneLeft = invertTree_DFS(root.left);
 
             root.right = cloneLeft;
             root.left = cloneRight;
