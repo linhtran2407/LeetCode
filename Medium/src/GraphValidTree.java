@@ -113,6 +113,44 @@ public class GraphValidTree {
         return parent.size() == n;
     }
 
+    /**
+     * Same algo as above but with recursion
+     */
+
+    class Solution {
+        List<List<Integer>> adjList = new ArrayList<>();
+        Set<Integer> seen = new HashSet<>();
+
+        public boolean validTree(int n, int[][] edges) {
+
+            if (edges.length != n-1){return false;}
+
+            for (int i=0; i<n; i++){
+                adjList.add(new ArrayList<Integer>());
+            }
+
+            for (int[] e: edges){
+                adjList.get(e[0]).add(e[1]);
+                adjList.get(e[1]).add(e[0]);
+            }
+
+            return dfs(0, -1) && seen.size() == n;
+        }
+
+        private boolean dfs(int node, int parent){
+            if (seen.contains(node)) {return false;}
+            seen.add(node);
+
+            for (int nei: adjList.get(node)){
+                if (parent != nei){
+                    if (!dfs(nei, node)) return false;
+                }
+            }
+
+            return true;
+        }
+    }
+
     public boolean validTree_2(int n, int[][] edges) {
         // algo using advanced graph theory:
         // the theory is: if number of edges < n-1, the tree is disconnected
@@ -170,5 +208,41 @@ public class GraphValidTree {
         }
 
         return seen.size() == n;
+    }
+
+    /**
+     * Same algo as above but with recursion
+     */
+
+    class Solution_2 {
+        List<List<Integer>> adjList = new ArrayList<>();
+        Set<Integer> seen = new HashSet<>();
+
+        public boolean validTree(int n, int[][] edges) {
+
+            if (edges.length != n-1){return false;}
+
+            for (int i=0; i<n; i++){
+                adjList.add(new ArrayList<Integer>());
+            }
+
+            for (int[] e: edges){
+                adjList.get(e[0]).add(e[1]);
+                adjList.get(e[1]).add(e[0]);
+            }
+
+            dfs(0);
+
+            return seen.size() == n;
+        }
+
+        private void dfs(int node){
+            if (seen.contains(node)) {return;}
+            seen.add(node);
+
+            for (int nei: adjList.get(node)){
+                dfs(nei);
+            }
+        }
     }
 }
