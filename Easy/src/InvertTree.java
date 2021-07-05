@@ -1,3 +1,6 @@
+import java.util.LinkedList;
+import java.util.Queue;
+
 public class InvertTree {
     /*
         @author: Linh Tran
@@ -24,7 +27,7 @@ public class InvertTree {
 
     class Solution { // iterative
         // TC: O(N)
-        public TreeNode invertTree(TreeNode root) {
+        public TreeNode invertTree_DFS(TreeNode root) {
             if (root == null){
                 return null;
             }
@@ -34,6 +37,29 @@ public class InvertTree {
 
             root.right = cloneLeft;
             root.left = cloneRight;
+
+            return root;
+        }
+
+
+        public TreeNode invertTree_BFS(TreeNode root) {
+            if (root == null){
+                return null;
+            }
+
+            Queue<TreeNode> q = new LinkedList<>();
+            q.add(root);
+
+            while(!q.isEmpty()){
+                TreeNode curr = q.poll();
+
+                TreeNode cloneLeft = curr.left;
+                curr.left = curr.right;
+                curr.right = cloneLeft;
+
+                if (curr.left != null){q.add(curr.left);}
+                if (curr.right != null){q.add(curr.right);}
+            }
 
             return root;
         }
