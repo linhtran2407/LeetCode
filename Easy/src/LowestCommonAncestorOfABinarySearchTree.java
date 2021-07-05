@@ -1,5 +1,12 @@
 public class LowestCommonAncestorOfABinarySearchTree {
+/*
+    @author: Linh Tran
+    @version: July 05, 2021
 
+    Runtime and usage info of the solution:
+    Runtime: 3 ms, faster than 100.00% of Java online submissions for Lowest Common Ancestor of a Binary Search Tree.
+    Memory Usage: 40.1 MB, less than 31.37% of Java online submissions for Lowest Common Ancestor of a Binary Search Tree.
+*/
 
      // Definition for a binary tree node.
      public class TreeNode {
