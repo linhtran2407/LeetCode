@@ -23,6 +23,7 @@ public class InvertTree {
     }
 
     class Solution { // iterative
+        // TC: O(N)
         public TreeNode invertTree(TreeNode root) {
             if (root == null){
                 return null;
