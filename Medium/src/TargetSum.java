@@ -1,7 +1,7 @@
 public class TargetSum {
 
 
-    // iterative
+    // brute force solution
     class Solution {
         int count = 0;
         public int findTargetSumWays(int[] nums, int target) {
