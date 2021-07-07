@@ -1,5 +1,12 @@
 public class TargetSum {
+/*
+    @author: Linh Tran
+    @version: July 07, 2021
 
+    Runtime and usage info of DFS solution:
+    Runtime: 475 ms, faster than 28.43% of Java online submissions for Target Sum.
+    Memory Usage: 36.5 MB, less than 77.70% of Java online submissions for Target Sum.
+*/
 
     // brute force solution
     class Solution {
