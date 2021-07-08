@@ -1,6 +1,7 @@
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.Queue;
 
 /*
 @author: Linh Tran
@@ -88,6 +89,84 @@ public class PacificAtlanticWaterFlow {
                     dfsReach(heights, newRow, newCol, reachable);
                 }
             }
+        }
+    }
+
+    class Solution_BFS {
+        private int numRows;
+        private int numCols;
+        private final int[][] DIRECTIONS = new int[][]{{0,1},{1,0},{0,-1},{-1,0}};
+        private Queue<int[]> pq;
+        private Queue<int[]> aq;
+
+        public List<List<Integer>> pacificAtlantic(int[][] heights) {
+            // bfs
+            numRows = heights.length;
+            numCols = heights[0].length;
+
+            List<List<Integer>> res = new ArrayList<>();
+
+            pq = new LinkedList<>();
+            aq = new LinkedList<>();
+
+            for (int r=0; r<numRows; r++){
+                pq.add(new int[]{r,0}); // left edge
+                aq.add(new int[]{r, numCols-1}); // right edge
+            }
+
+            for (int c=0; c<numCols; c++){
+                pq.add(new int[]{0, c}); // top edge
+                aq.add(new int[]{numRows-1, c}); // bottom edge
+            }
+
+            boolean[][] reachPacific = bfs(heights,pq);
+            boolean[][] reachAtlantic = bfs(heights,aq);
+
+            for (int r=0; r<numRows; r++){
+                for (int c=0; c<numCols; c++){
+                    if (reachPacific[r][c] && reachAtlantic[r][c]){
+                        res.add(List.of(r,c));
+                    }
+                }
+            }
+
+            return res;
+        }
+
+        private boolean[][] bfs(int[][] heights, Queue<int[]> q){
+            boolean[][] reachable = new boolean[numRows][numCols];
+
+            while(!q.isEmpty()){
+                int[] curr = q.poll();
+
+                // mark as reachable
+                reachable[curr[0]][curr[1]] = true;
+                int currHeight = heights[curr[0]][curr[1]];
+
+                // from the current cell, go to all 4 directions
+                // and check for requirement satisfaction
+                for (int[] dir: DIRECTIONS){
+                    int newRow = curr[0] + dir[0];
+                    int newCol = curr[1] + dir[1];
+
+                    // check for valid coordinates
+                    if (newRow < 0 || newCol < 0 || newRow >= numRows || newCol >= numCols){
+                        continue;
+                    }
+
+                    // if visited, skip
+                    if (reachable[newRow][newCol]) { continue; }
+
+                    // check for valid height
+                    int newHeight = heights[newRow][newCol];
+
+                    if (newHeight >= currHeight){
+                        q.add(new int[]{newRow, newCol});
+                    }
+                }
+            }
+
+            return reachable;
         }
     }
 }
