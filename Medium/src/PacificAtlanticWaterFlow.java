@@ -2,6 +2,15 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
+/*
+@author: Linh Tran
+@version: July 08, 2021
+
+Runtime and usage info of DFS solution:
+Runtime: 4 ms, faster than 81.29% of Java online submissions for Pacific Atlantic Water Flow.
+Memory Usage: 40.5 MB, less than 42.50% of Java online submissions for Pacific Atlantic Water Flow.
+*/
+
 public class PacificAtlanticWaterFlow {
 
     // DFS solution
