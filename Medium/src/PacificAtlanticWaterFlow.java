@@ -17,7 +17,7 @@ public class PacificAtlanticWaterFlow {
     // TC: O(M*N) with M,N being the size of the graph
     // SC: O(M*N) with M,N being the size of the graph
 
-    class Solution {
+    class Solution_DFS {
         private static final int[][] DIRECTIONS = new int[][]{{0, 1}, {1, 0}, {-1, 0}, {0, -1}};
         private int m; // number of rows
         private int n; // number of columns
