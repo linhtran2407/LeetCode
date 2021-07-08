@@ -6,7 +6,7 @@ public class PacificAtlanticWaterFlow {
 
     // DFS solution
     // TC: O(M*N) with M,N being the size of the graph
-    // SC:
+    // SC: O(M*N) with M,N being the size of the graph
 
     class Solution {
         private static final int[][] DIRECTIONS = new int[][]{{0, 1}, {1, 0}, {-1, 0}, {0, -1}};
