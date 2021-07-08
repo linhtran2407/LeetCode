@@ -94,6 +94,12 @@ public class PacificAtlanticWaterFlow {
     }
 
     class Solution_BFS {
+
+        // BFS solution
+        // TC: O(M*N) with M,N being the size of the graph. Worst case when all cells have the same heights,
+        // runtime would be O(2*M*N)
+        // SC: O(M*N) with M,N being the size of the graph
+
         private int numRows;
         private int numCols;
         private final int[][] DIRECTIONS = new int[][]{{0,1},{1,0},{0,-1},{-1,0}};
