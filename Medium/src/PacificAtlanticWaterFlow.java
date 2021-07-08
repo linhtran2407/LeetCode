@@ -105,15 +105,12 @@ public class PacificAtlanticWaterFlow {
         private int numRows;
         private int numCols;
         private final int[][] DIRECTIONS = new int[][]{{0,1},{1,0},{0,-1},{-1,0}};
-        private Queue<int[]> pq;
-        private Queue<int[]> aq;
+        private Queue<int[]> pq; // Pacific queue
+        private Queue<int[]> aq; // Atlantic queue
 
         public List<List<Integer>> pacificAtlantic(int[][] heights) {
-            // bfs
             numRows = heights.length;
             numCols = heights[0].length;
-
-            List<List<Integer>> res = new ArrayList<>();
 
             pq = new LinkedList<>();
             aq = new LinkedList<>();
@@ -130,6 +127,8 @@ public class PacificAtlanticWaterFlow {
 
             boolean[][] reachPacific = bfs(heights,pq);
             boolean[][] reachAtlantic = bfs(heights,aq);
+
+            List<List<Integer>> res = new ArrayList<>();
 
             for (int r=0; r<numRows; r++){
                 for (int c=0; c<numCols; c++){
@@ -169,6 +168,7 @@ public class PacificAtlanticWaterFlow {
                     // check for valid height
                     int newHeight = heights[newRow][newCol];
 
+                    // if satisfies all requirement, add to the queue
                     if (newHeight >= currHeight){
                         q.add(new int[]{newRow, newCol});
                     }
