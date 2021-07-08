@@ -98,7 +98,9 @@ public class PacificAtlanticWaterFlow {
         // BFS solution
         // TC: O(M*N) with M,N being the size of the graph. Worst case when all cells have the same heights,
         // runtime would be O(2*M*N)
-        // SC: O(M*N) with M,N being the size of the graph
+        // SC: O(M*N) with M,N being the size of the graph. Space complexity comes from the queues and the
+        // boolean arrays we use for both oceans. Their size could not exceed the size of the initial graph.
+        // Hence, SC would not exceed M*N
 
         private int numRows;
         private int numCols;
