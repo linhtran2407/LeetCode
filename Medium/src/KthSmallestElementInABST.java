@@ -2,6 +2,14 @@ import java.util.ArrayList;
 
 public class KthSmallestElementInABST {
 
+/*
+    @author: Linh Tran
+    @version: July 08, 2021
+
+    Runtime and usage info of DFS solution:
+    Runtime: 2 ms, faster than 14.60% of Java online submissions for Kth Smallest Element in a BST.
+    Memory Usage: 43 MB, less than 5.31% of Java online submissions for Kth Smallest Element in a BST.
+*/
 
      //Definition for a binary tree node
      public class TreeNode {
