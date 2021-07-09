@@ -3,7 +3,7 @@ import java.util.ArrayList;
 public class KthSmallestElementInABST {
 
 
-     //Definition for a binary tree node.
+     //Definition for a binary tree node
      public class TreeNode {
           int val;
           TreeNode left;
@@ -18,6 +18,8 @@ public class KthSmallestElementInABST {
      }
 
     class Solution {
+         // TC: O(N)
+        // SC: O(N)
         public int kthSmallest(TreeNode root, int k) {
             ArrayList<Integer> res = traversal(root, new ArrayList<Integer>());
             return (res.get(k-1));
