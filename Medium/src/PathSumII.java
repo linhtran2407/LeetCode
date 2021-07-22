@@ -2,6 +2,14 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class PathSumII {
+    /*
+        @author: Linh Tran
+        @version: July 22, 2021
+
+        Runtime and usage info of the solution:
+        Runtime: 1 ms, faster than 99.98% of Java online submissions for Path Sum II.
+        Memory Usage: 39.1 MB, less than 92.68% of Java online submissions for Path Sum II.
+    */
 
      // Definition for a binary tree node.
      public class TreeNode {
