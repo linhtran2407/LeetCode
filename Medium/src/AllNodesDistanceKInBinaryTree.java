@@ -1,16 +1,21 @@
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
 public class AllNodesDistanceKInBinaryTree {
 
-    /**
-     * Definition for a binary tree node.
-     * public class TreeNode {
-     *     int val;
-     *     TreeNode left;
-     *     TreeNode right;
-     *     TreeNode(int x) { val = x; }
-     * }
-     */
+
+     // Definition for a binary tree node.
+      public class TreeNode {
+          int val;
+          TreeNode left;
+          TreeNode right;
+          TreeNode(int x) { val = x; }
+      }
+
     class Solution {
-        Map<TreeNode, TreeNode> parentMap;
+         Map<TreeNode, TreeNode> parentMap;
         public List<Integer> distanceK(TreeNode root, TreeNode target, int k) {
             parentMap = new HashMap<>();
             // dfs to annotate parent
