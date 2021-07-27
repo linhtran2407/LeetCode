@@ -3,6 +3,15 @@ import java.util.Map;
 
 public class PathSumIII {
 
+    /*
+        @author: Linh Tran
+        @version: July 27, 2021
+
+        Runtime and usage info of the solution:
+        Runtime: 2 ms, faster than 100.00% of Java online submissions for Path Sum III.
+        Memory Usage: 38.6 MB, less than 83.24% of Java online submissions for Path Sum III.
+    */
+
      // Definition for a binary tree node.
      public class TreeNode {
           int val;
