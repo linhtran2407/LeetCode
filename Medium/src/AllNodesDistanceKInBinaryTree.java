@@ -1,10 +1,15 @@
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 public class AllNodesDistanceKInBinaryTree {
 
+/*
+        @author: Linh Tran
+        @version: July 27, 2021
+
+        Runtime and usage info of the solution:
+        Runtime: 13 ms, faster than 97.54% of Java online submissions for All Nodes Distance K in Binary Tree.
+        Memory Usage: 39 MB, less than 65.82% of Java online submissions for All Nodes Distance K in Binary Tree.
+    */
 
      // Definition for a binary tree node.
       public class TreeNode {
