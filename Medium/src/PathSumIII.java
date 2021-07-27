@@ -1,3 +1,4 @@
+import java.util.HashMap;
 import java.util.Map;
 
 public class PathSumIII {
@@ -21,8 +22,16 @@ public class PathSumIII {
         int target;
         Map<Integer, Integer> sumMap;
         public int pathSum(TreeNode root, int targetSum) {
-            // continuous subarray sum
-            // algo: use a hashmap to store all the running sum, put (0,1) into the map for the distance of sum of 0 (in case the running sum itself == target => running sum - target == 0) at each running sum, check if the running sum - target exists in the table and increment count if there is. always put running sum into the table during this process. when reach the leaf, remove the running sum at that leaf before going to the parallel subtree(remove the running some at leaf on the left, for example, before going on to the right subtree)
+            // simpler problem: continuous subarray sum
+            // algo: use a hashmap to store all the running sum,
+            // put (0,1) into the map for the case when distance of sum = 0
+            // (in case the running sum itself == target => running sum - target == 0)
+            // at each running sum, check if the running sum - target exists in the table
+            // and increment count if there is.
+            // always put/update running sum into the table during this process.
+            // when reach the leaf, remove the running sum at that leaf before going to the parallel subtree
+            // (remove the running some at leaf on the left, for example, before going on to the right subtree)
+
             // TC: O(N) with N being the number of nodes
             // SP: O(N) because each nodes has a running sum
             target = targetSum;
