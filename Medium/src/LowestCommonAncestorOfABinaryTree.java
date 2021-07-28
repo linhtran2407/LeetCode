@@ -1,14 +1,14 @@
 public class LowestCommonAncestorOfABinaryTree {
 
-    /**
-     * Definition for a binary tree node.
-     * public class TreeNode {
-     *     int val;
-     *     TreeNode left;
-     *     TreeNode right;
-     *     TreeNode(int x) { val = x; }
-     * }
-     */
+
+     //Definition for a binary tree node.
+      public class TreeNode {
+          int val;
+          TreeNode left;
+          TreeNode right;
+          TreeNode(int x) { val = x; }
+      }
+
     class Solution {
         TreeNode ans;
         public TreeNode lowestCommonAncestor(TreeNode root, TreeNode p, TreeNode q) {
@@ -21,7 +21,7 @@ public class LowestCommonAncestorOfABinaryTree {
             // if p or q is in either branch, set that branch to 1
             int left = dfs(node.left, p, q)? 1:0;
             int right = dfs(node.right, p, q)? 1:0;
-            // in case the anscestor is either p or q itself
+            // in case the ancestor is either p or q itself
             int mid = (node == p || node == q)? 1:0;
 
             // if find 2 (or more) flags at each recursion
