@@ -8,6 +8,9 @@ public class LowestCommonAncestorOfABinaryTree {
         @author: Linh Tran
         @version: July 29, 2021
 
+Runtime: 4 ms, faster than 100.00% of Java online submissions for Lowest Common Ancestor of a Binary Tree.
+Memory Usage: 41.3 MB, less than 34.30% of Java online submissions for Lowest Common Ancestor of a Binary Tree
+
         Runtime and usage info of first solution:
         Runtime: 7 ms, faster than 30.95% of Java online submissions for Lowest Common Ancestor of a Binary Tree.
         Memory Usage: 45.4 MB, less than 5.05% of Java online submissions for Lowest Common Ancestor of a Binary Tree.
@@ -25,6 +28,25 @@ public class LowestCommonAncestorOfABinaryTree {
           TreeNode right;
           TreeNode(int x) { val = x; }
       }
+
+      // shortest solution
+    class Solution {
+        public TreeNode lowestCommonAncestor(TreeNode root, TreeNode p, TreeNode q) {
+            // found p and q
+            if (root == null || root == p || root == q) {return root;}
+
+            // recursively find p and q in left/right branch
+            TreeNode leftBranch = lowestCommonAncestor(root.left, p, q);
+            TreeNode rightBranch = lowestCommonAncestor(root.right, p, q);
+
+            // if found both p and q on left and right branch (different branch),
+            // then root is the LCA
+            // if either of the left/right branch is null
+            // check if left is null, if not, left is the LCA
+            // otherwise, right must be the LCA
+            return (leftBranch != null && rightBranch != null)? root:(leftBranch!=null)? leftBranch:rightBranch;
+        }
+    }
 
     class Solution1 {
         TreeNode ans;
