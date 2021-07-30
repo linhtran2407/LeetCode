@@ -1,4 +1,19 @@
+import java.util.Arrays;
+
 public class MaximumBinaryTree {
+
+    /*
+        @author: Linh Tran
+        @version: July 30, 2021
+
+        Runtime and usage info of first solution:
+        Runtime: 3 ms, faster than 40.49% of Java online submissions for Maximum Binary Tree.
+        Memory Usage: 39.1 MB, less than 65.21% of Java online submissions for Maximum Binary Tree.
+
+        Runtime and usage info of second solution:
+        Runtime: 2 ms, faster than 87.41% of Java online submissions for Maximum Binary Tree.
+        Memory Usage: 39.6 MB, less than 26.37% of Java online submissions for Maximum Binary Tree.
+    */
 
 
      // Definition for a binary tree node.
@@ -29,6 +44,35 @@ public class MaximumBinaryTree {
             root.right = constructMaximumBinaryTree(Arrays.copyOfRange(nums, maxIdx+1, nums.length));
 
             return root;
+        }
+    }
+
+
+    class Solution1 {
+        public TreeNode constructMaximumBinaryTree(int[] nums) {
+            return construct(nums, 0, nums.length-1);
+        }
+
+        private TreeNode construct(int[] nums, int low, int high){
+            if (high-low+1 <=0){return null;} // no num left to create node
+
+            int rootIndex = maxIndex(nums, low, high);
+            TreeNode root = new TreeNode (nums[rootIndex]);
+            root.left = construct(nums, low, rootIndex-1);
+            root.right = construct(nums, rootIndex+1, high);
+
+            return root;
+        }
+
+        private int maxIndex (int[] nums, int low, int high){
+            int ans = low;
+            for (int n=low; n<=high;n++){
+                if (nums[n] > nums[ans]){
+                    ans=n;
+                }
+            }
+
+            return ans;
         }
     }
 }
