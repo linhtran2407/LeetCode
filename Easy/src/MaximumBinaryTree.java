@@ -1,4 +1,5 @@
 import java.util.Arrays;
+import java.util.Stack;
 
 public class MaximumBinaryTree {
 
@@ -6,6 +7,7 @@ public class MaximumBinaryTree {
         @author: Linh Tran
         @version: July 30, 2021
 
+        // O(N^2) approaches:
         Runtime and usage info of first solution:
         Runtime: 3 ms, faster than 40.49% of Java online submissions for Maximum Binary Tree.
         Memory Usage: 39.1 MB, less than 65.21% of Java online submissions for Maximum Binary Tree.
@@ -13,6 +15,10 @@ public class MaximumBinaryTree {
         Runtime and usage info of second solution:
         Runtime: 2 ms, faster than 87.41% of Java online submissions for Maximum Binary Tree.
         Memory Usage: 39.6 MB, less than 26.37% of Java online submissions for Maximum Binary Tree.
+
+        // O(N) approach:
+        Runtime: 6 ms, faster than 17.91% of Java online submissions for Maximum Binary Tree.
+        Memory Usage: 39.2 MB, less than 65.21% of Java online submissions for Maximum Binary Tree.
     */
 
 
@@ -73,6 +79,35 @@ public class MaximumBinaryTree {
             }
 
             return ans;
+        }
+    }
+
+    class Solution3 {
+        public TreeNode constructMaximumBinaryTree(int[] nums) {
+            Stack<TreeNode> st = new Stack<>();
+            for (int n:nums){
+                TreeNode curr = new TreeNode(n);
+                // until empty or found a larger val, all of the
+                // small nodes currently have (if any), will be on
+                // the left branch of current node
+                while(!st.isEmpty() && st.peek().val < curr.val){
+                    curr.left = st.pop();
+                }
+
+                // if not empty but found a larger node
+                if (!st.isEmpty()){
+                    st.peek().right = curr;
+                }
+
+                st.push(curr);
+            }
+
+            // get the very bottom element
+            while(st.size() > 1){
+                st.pop();
+            }
+
+            return st.peek();
         }
     }
 }
