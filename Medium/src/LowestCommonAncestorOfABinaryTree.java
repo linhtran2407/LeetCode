@@ -43,8 +43,8 @@ public class LowestCommonAncestorOfABinaryTree {
             // if found both p and q on left and right branch (different branch),
             // then root is the LCA
             // if either of the left/right branch is null
-            // check if left is null, if not, left is the LCA
-            // otherwise, right must be the LCA
+            // check if left is null, if not, LCA is in the left
+            // otherwise, right must contain the LCA
             return (leftBranch != null && rightBranch != null)? root:(leftBranch!=null)? leftBranch:rightBranch;
         }
     }
