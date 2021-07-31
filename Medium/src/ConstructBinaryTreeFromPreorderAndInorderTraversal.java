@@ -2,7 +2,14 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class ConstructBinaryTreeFromPreorderAndInorderTraversal {
+/*
+    @author: Linh Tran
+    @version: July 31, 2021
 
+    Runtime and usage info of BFS solution:
+    Runtime: 2 ms, faster than 72.00% of Java online submissions for Construct Binary Tree from Preorder and Inorder Traversal.
+    Memory Usage: 39.2 MB, less than 47.37% of Java online submissions for Construct Binary Tree from Preorder and Inorder Traversal.
+*/
      //Definition for a binary tree node.
      public class TreeNode {
          int val;
