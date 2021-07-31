@@ -1,6 +1,8 @@
 import com.sun.source.tree.Tree;
 
+import java.util.HashMap;
 import java.util.LinkedList;
+import java.util.Map;
 import java.util.Queue;
 
 public class MaximumWidthBinaryTree {
@@ -11,6 +13,9 @@ public class MaximumWidthBinaryTree {
         Runtime and usage info of the solution:
         Runtime: 1 ms, faster than 97.26% of Java online submissions for Maximum Width of Binary Tree.
         Memory Usage: 38.6 MB, less than 77.22% of Java online submissions for Maximum Width of Binary Tree.
+
+        Runtime: 1 ms, faster than 97.26% of Java online submissions for Maximum Width of Binary Tree.
+        Memory Usage: 39.1 MB, less than 41.98% of Java online submissions for Maximum Width of Binary Tree.
     */
 
 
@@ -34,7 +39,7 @@ public class MaximumWidthBinaryTree {
          public int getValue(){return this.index;}
      }
 
-    class Solution {
+    class Solution_BFS {
         public int widthOfBinaryTree(TreeNode root) {
             if (root == null){
                 return 0;
@@ -64,6 +69,37 @@ public class MaximumWidthBinaryTree {
                 res = Math.max(res, currTailLevel.index - currHeadLevel.index + 1);
             }
             return res;
+        }
+    }
+
+    class Solution_DFS {
+        // dfs: keep track of the first node's index of each level/depth
+        // in a table with depth being the key and the index of the first node on that depth
+        // being the value
+        // at each dfs, when traversing through each node, update the max width
+        // by checking if the current node's index - the first node's index on the same
+        // level with the current node + 1 is greater than the current max width
+        private int maxWidth;
+        private Map<Integer, Integer> firstNodeIndices;
+
+        private void dfs(TreeNode node, int depth, int index){
+            if (node == null){return;}
+            if (!firstNodeIndices.containsKey(depth)){
+                firstNodeIndices.put(depth, index);
+            }
+
+            int firstNodeIndex = firstNodeIndices.get(depth);
+            maxWidth = Math.max(maxWidth, index-firstNodeIndex+1);
+
+            dfs(node.left, depth+1, index*2);
+            dfs(node.right, depth+1, index*2+1);
+        }
+        public int widthOfBinaryTree(TreeNode root) {
+            maxWidth = 0;
+            if (root == null){return this.maxWidth;}
+            firstNodeIndices = new HashMap<>();
+            dfs(root, 0, 0);
+            return this.maxWidth;
         }
     }
 }
