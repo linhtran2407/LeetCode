@@ -10,10 +10,11 @@ public class MaximumWidthBinaryTree {
         @author: Linh Tran
         @version: July 31, 2021
 
-        Runtime and usage info of the solution:
+        Runtime and usage info of BFS solution:
         Runtime: 1 ms, faster than 97.26% of Java online submissions for Maximum Width of Binary Tree.
         Memory Usage: 38.6 MB, less than 77.22% of Java online submissions for Maximum Width of Binary Tree.
 
+        Runtime and usage info of DFS solution:
         Runtime: 1 ms, faster than 97.26% of Java online submissions for Maximum Width of Binary Tree.
         Memory Usage: 39.1 MB, less than 41.98% of Java online submissions for Maximum Width of Binary Tree.
     */
