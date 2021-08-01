@@ -32,22 +32,28 @@ public class LowestCommonAncestorOfABinaryTree {
 
       // shortest solution
     class Solution {
-        public TreeNode lowestCommonAncestor(TreeNode root, TreeNode p, TreeNode q) {
-            // found p and q
-            if (root == null || root == p || root == q) {return root;}
+          public TreeNode lowestCommonAncestor(TreeNode root, TreeNode p, TreeNode q) {
+              // found p and q
+              if (root == null || root == p || root == q) {
+                  return root;
+              }
 
-            // recursively find p and q in left/right branch
-            TreeNode leftBranch = lowestCommonAncestor(root.left, p, q);
-            TreeNode rightBranch = lowestCommonAncestor(root.right, p, q);
+              // recursively find p and q in left/right branch
+              TreeNode leftBranch = lowestCommonAncestor(root.left, p, q);
+              TreeNode rightBranch = lowestCommonAncestor(root.right, p, q);
 
-            // if found both p and q on left and right branch (different branch),
-            // then root is the LCA
-            // if either of the left/right branch is null
-            // check if left is null, if not, LCA is in the left
-            // otherwise, right must contain the LCA
-            return (leftBranch != null && rightBranch != null)? root:(leftBranch!=null)? leftBranch:rightBranch;
-        }
-    }
+              // if found both p and q on left and right branch (different branch),
+              // then root is the LCA
+              if (leftBranch != null && rightBranch != null) {
+                  return root;
+              }
+
+              // if either of the left/right branch is null
+              // check if left is null, if not, left is the LCA
+              // otherwise, right must be the LCA
+              return leftBranch != null ? leftBranch : rightBranch;
+          }
+      }
 
     class Solution1 {
         TreeNode ans;
