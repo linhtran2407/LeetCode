@@ -21,7 +21,6 @@ public class MaximumBinaryTree {
         Memory Usage: 39.2 MB, less than 65.21% of Java online submissions for Maximum Binary Tree.
     */
 
-
      // Definition for a binary tree node.
      public class TreeNode {
          int val;
@@ -52,7 +51,6 @@ public class MaximumBinaryTree {
             return root;
         }
     }
-
 
     class Solution1 {
         public TreeNode constructMaximumBinaryTree(int[] nums) {
