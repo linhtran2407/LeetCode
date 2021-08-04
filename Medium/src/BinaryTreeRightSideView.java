@@ -29,7 +29,8 @@ public class BinaryTreeRightSideView {
         }
       }
 
-    public List<Integer> rightSideView(TreeNode root) {
+      // BFS
+    public List<Integer> rightSideView_BFS(TreeNode root) {
         List<Integer> result = new ArrayList<>();
         if (root == null) {return result;}
 
