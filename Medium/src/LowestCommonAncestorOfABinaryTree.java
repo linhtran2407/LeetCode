@@ -21,7 +21,6 @@ public class LowestCommonAncestorOfABinaryTree {
         Memory Usage: 41 MB, less than 76.50% of Java online submissions for Lowest Common Ancestor of a Binary Tree.
     */
 
-
      //Definition for a binary tree node.
       public class TreeNode {
           int val;

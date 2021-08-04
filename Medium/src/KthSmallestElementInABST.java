@@ -62,6 +62,5 @@ public class KthSmallestElementInABST {
                 root = root.right;
             }
         }
-
     }
 }
