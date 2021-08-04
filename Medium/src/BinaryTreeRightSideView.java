@@ -58,4 +58,29 @@ public class BinaryTreeRightSideView {
 
         return result;
     }
+
+    // DFS
+    public List<Integer> rightSideView(TreeNode root) {
+        res = new ArrayList<>();
+        if (root == null){return res;}
+        dfs(root, 0);
+        return res;
+    }
+
+    private void dfs(TreeNode root, int level){
+        if (level == res.size()){
+            res.add(root.val);
+        }
+
+        // add the rightmost child first
+        if (root.right != null){
+            dfs(root.right, level+1);
+        }
+
+        // if no right child, add left (if any)
+        if (root.left != null){
+            dfs(root.left, level+1);
+        }
+
+    }
 }
