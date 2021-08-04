@@ -61,7 +61,7 @@ public class BinaryTreeRightSideView {
     }
 
     // DFS
-    public List<Integer> rightSideView(TreeNode root) {
+    public List<Integer> rightSideView_DFS(TreeNode root) {
         res = new ArrayList<>();
         if (root == null){return res;}
         dfs(root, 0);
