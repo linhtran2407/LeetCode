@@ -11,6 +11,10 @@ import java.util.Queue;
     Runtime and usage info of BFS solution:
     Runtime: 1 ms, faster than 76.08% of Java online submissions for Binary Tree Right Side View.
     Memory Usage: 37.7 MB, less than 53.14% of Java online submissions for Binary Tree Right Side View.
+
+    Runtime and usage info of DFS solution:
+    Runtime: 0 ms, faster than 100.00% of Java online submissions for Binary Tree Right Side View.
+    Memory Usage: 37.7 MB, less than 64.85% of Java online submissions for Binary Tree Right Side View.
  */
 
 public class BinaryTreeRightSideView {
