@@ -10,6 +10,7 @@ public class AddToArrayFormOfInteger {
         Runtime: 3 ms, faster than 94.17% of Java online submissions for Add to Array-Form of Integer.
         Memory Usage: 40.5 MB, less than 52.70% of Java online submissions for Add to Array-Form of Integer.
      */
+
     public List<Integer> addToArrayForm(int[] num, int k) {
         List<Integer> res = new ArrayList<>();
         int carry = 0;
