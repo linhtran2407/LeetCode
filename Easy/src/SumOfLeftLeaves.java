@@ -15,7 +15,8 @@ public class SumOfLeftLeaves {
          }
      }
 
-    class Solution {
+    class Solution_BFS {
+         // class Pair is built-in on LeetCode
         Pair<TreeNode, Integer> xPar;
         Pair<TreeNode, Integer> yPar;
         public boolean isCousins(TreeNode root, int x, int y) {
