@@ -15,7 +15,6 @@ public class SumOfLeftLeaves {
     Memory Usage: 37.7 MB, less than 64.85% of Java online submissions for Binary Tree Right Side View.
  */
 
-
      // Definition for a binary tree node.
      public class TreeNode {
          int val;
@@ -63,6 +62,31 @@ public class SumOfLeftLeaves {
         }
     }
 
+    class Solution_DFS {
+        int ans;
+
+        public int sumOfLeftLeaves(TreeNode root) {
+            // detect the leaf
+            // detect the left leaf
+            ans = 0;
+            dfs(root);
+            return this.ans;
+        }
+
+        private void dfs(TreeNode root) {
+            if (root == null) {
+                return;
+            }
+
+            TreeNode leftChild = root.left;
+            if (leftChild != null && leftChild.left == null && leftChild.right == null) {
+                ans += leftChild.val;
+            }
+
+            dfs(root.left);
+            dfs(root.right);
+        }
+    }
      /**
     class Solution_DFS {
          // class Pair is built-in on LeetCode
