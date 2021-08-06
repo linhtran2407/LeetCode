@@ -8,8 +8,8 @@ public class CousinsInBinaryTree {
     @version: Aug 6th, 2021
 
     Runtime and usage info of BFS solution:
-    Runtime: 0 ms, faster than 100.00% of Java online submissions for Sum of Left Leaves.
-    Memory Usage: 36.9 MB, less than 34.28% of Java online submissions for Sum of Left Leaves.
+    Runtime: 0 ms, faster than 100.00% of Java online submissions for Cousins in Binary Tree.
+    Memory Usage: 36.7 MB, less than 68.16% of Java online submissions for Cousins in Binary Tree.
 
     Runtime and usage info of DFS solution:
     Runtime: 0 ms, faster than 100.00% of Java online submissions for Cousins in Binary Tree.
@@ -30,7 +30,7 @@ public class CousinsInBinaryTree {
          }
      }
 
-    class Solution {
+    class Solution_BFS {
         public boolean isCousins(TreeNode root, int x, int y) {
             // same depth
             // different parents
