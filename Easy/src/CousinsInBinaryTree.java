@@ -16,7 +16,9 @@ public class CousinsInBinaryTree {
          }
      }
 
-    class Solution {
+     // class Pair is provided on LeetCode
+    /**
+    class Solution_DFS {
         Pair<TreeNode, Integer> xPar;
         Pair<TreeNode, Integer> yPar;
         public boolean isCousins(TreeNode root, int x, int y) {
@@ -71,4 +73,5 @@ public class CousinsInBinaryTree {
         }
 
     }
+     */
 }
