@@ -2,6 +2,18 @@ import java.util.LinkedList;
 import java.util.Queue;
 
 public class SumOfLeftLeaves {
+    /*
+    @author: Linh Tran
+    @version: Aug 6th, 2021
+
+    Runtime and usage info of BFS solution:
+    Runtime: 0 ms, faster than 100.00% of Java online submissions for Sum of Left Leaves.
+    Memory Usage: 36.9 MB, less than 34.28% of Java online submissions for Sum of Left Leaves.
+
+    Runtime and usage info of DFS solution:
+    Runtime: 0 ms, faster than 100.00% of Java online submissions for Binary Tree Right Side View.
+    Memory Usage: 37.7 MB, less than 64.85% of Java online submissions for Binary Tree Right Side View.
+ */
 
 
      // Definition for a binary tree node.
