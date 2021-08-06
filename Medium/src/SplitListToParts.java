@@ -2,7 +2,7 @@ public class SplitListToParts {
 
     /*
         @author: Linh Tran
-        @version: Jun 10th, 2021
+        @version: Aug 6th, 2021
 
         Runtime and usage info of brute force solution:
         Runtime: 0 ms, faster than 100.00% of Java online submissions for Split Linked List in Parts.
