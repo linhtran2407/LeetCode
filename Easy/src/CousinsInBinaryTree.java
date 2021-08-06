@@ -1,21 +1,21 @@
 public class CousinsInBinaryTree {
 
 
-    /**
-     * Definition for a binary tree node.
-     * public class TreeNode {
-     *     int val;
-     *     TreeNode left;
-     *     TreeNode right;
-     *     TreeNode() {}
-     *     TreeNode(int val) { this.val = val; }
-     *     TreeNode(int val, TreeNode left, TreeNode right) {
-     *         this.val = val;
-     *         this.left = left;
-     *         this.right = right;
-     *     }
-     * }
-     */
+
+     // Definition for a binary tree node.
+     public class TreeNode {
+         int val;
+         TreeNode left;
+         TreeNode right;
+         TreeNode() {}
+         TreeNode(int val) { this.val = val; }
+         TreeNode(int val, TreeNode left, TreeNode right) {
+             this.val = val;
+             this.left = left;
+             this.right = right;
+         }
+     }
+
     class Solution {
         Pair<TreeNode, Integer> xPar;
         Pair<TreeNode, Integer> yPar;
