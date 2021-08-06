@@ -16,6 +16,40 @@ public class SumOfLeftLeaves {
      }
 
     class Solution_BFS {
+        public int sumOfLeftLeaves(TreeNode root) {
+            int ans = 0;
+            if (root == null){
+                return ans;
+            }
+
+            Queue<TreeNode> q = new LinkedList<>();
+            q.add(root);
+            while(!q.isEmpty()){
+                int size = q.size();
+
+                for(int i=0; i<size; i++){
+                    TreeNode curr = q.poll();
+
+                    TreeNode leftChild = curr.left;
+                    if (leftChild != null){
+                        if (leftChild.left == null && leftChild.right == null){
+                            ans += leftChild.val;
+                        }
+                        q.add(leftChild);
+                    }
+
+                    if (curr.right != null){
+                        q.add(curr.right);
+                    }
+                }
+            }
+
+            return ans;
+        }
+    }
+
+     /**
+    class Solution_DFS {
          // class Pair is built-in on LeetCode
         Pair<TreeNode, Integer> xPar;
         Pair<TreeNode, Integer> yPar;
@@ -71,4 +105,6 @@ public class SumOfLeftLeaves {
         }
 
     }
+
+      */
 }
