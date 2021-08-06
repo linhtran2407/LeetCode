@@ -10,9 +10,9 @@ public class SplitListToParts {
          ListNode(int val, ListNode next) { this.val = val; this.next = next; }
      }
 
+    // brute force:
     class Solution {
         public ListNode[] splitListToParts(ListNode head, int k) {
-            // brute force:
             // initialize the result as an array of k sub-linked list
             // go through the array once, for each linked list, put a place holder (new Linked List)
             // to indicate that how many listnodes should be in each sub-linked list
