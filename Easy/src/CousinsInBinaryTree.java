@@ -1,6 +1,19 @@
+import java.util.Queue;
+
 public class CousinsInBinaryTree {
 
+    /*
+    @author: Linh Tran
+    @version: Aug 6th, 2021
 
+    Runtime and usage info of BFS solution:
+    Runtime: 0 ms, faster than 100.00% of Java online submissions for Sum of Left Leaves.
+    Memory Usage: 36.9 MB, less than 34.28% of Java online submissions for Sum of Left Leaves.
+
+    Runtime and usage info of DFS solution:
+    Runtime: 0 ms, faster than 100.00% of Java online submissions for Cousins in Binary Tree.
+    Memory Usage: 36.3 MB, less than 98.34% of Java online submissions for Cousins in Binary Tree.
+ */
 
      // Definition for a binary tree node.
      public class TreeNode {
@@ -15,6 +28,61 @@ public class CousinsInBinaryTree {
              this.right = right;
          }
      }
+
+    class Solution {
+        public boolean isCousins(TreeNode root, int x, int y) {
+            // same depth
+            // different parents
+            // brute force: keep track of the parents and traverse bfs
+            // algo:
+            // traverse level by level
+            // at each level, detect if a node's EITHER children are x and y
+            // assign parent node of x and y separately
+            // check if parent of x and y are different -> return true
+
+            // root cannot have cousin
+            if (root.val == x || root.val == y){return false;}
+
+            Queue<TreeNode> q = new LinkedList<>();
+            q.add(root);
+
+            // bfs
+            while(!q.isEmpty()){
+                int size = q.size();
+
+                TreeNode xPar = null;
+                TreeNode yPar = null;
+
+                // traverse the current level
+                for (int i=0; i<size; i++){
+                    TreeNode curr = q.poll();
+
+                    // detect if a node's EITHER children are x and y
+                    if (curr.left != null){
+                        if (curr.left.val == x){
+                            xPar = curr;
+                        } else if (curr.left.val == y){
+                            yPar = curr;
+                        }
+                        q.add(curr.left);
+                    }
+
+                    if (curr.right != null){
+                        if (curr.right.val == x){
+                            xPar = curr;
+                        } else if (curr.right.val == y){
+                            yPar = curr;
+                        }
+                        q.add(curr.right);
+                    }
+                }
+
+                if (xPar != null && yPar != null && xPar != yPar){return true;}
+            }
+
+            return false;
+        }
+    }
 
      // class Pair is provided on LeetCode
     /**
