@@ -22,7 +22,6 @@ public class CousinsInBinaryTree {
         Pair<TreeNode, Integer> xPar;
         Pair<TreeNode, Integer> yPar;
         public boolean isCousins(TreeNode root, int x, int y) {
-            // try dfs
             // brute force: keep track of the parents and traverse bfs
             // algo:
             // traverse level by level
