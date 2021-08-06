@@ -12,9 +12,9 @@ public class SumOfLeftLeaves {
              this.val = val;
              this.left = left;
              this.right = right;
-     *     }
-     * }
-     */
+         }
+     }
+
     class Solution {
         Pair<TreeNode, Integer> xPar;
         Pair<TreeNode, Integer> yPar;
