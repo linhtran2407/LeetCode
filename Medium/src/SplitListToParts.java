@@ -5,10 +5,8 @@ public class SplitListToParts {
         @version: Jun 10th, 2021
 
         Runtime and usage info of brute force solution:
-        Runtime: 1 ms, faster than 76.08% of Java online submissions for Binary Tree Right Side View.
-        Memory Usage: 37.7 MB, less than 53.14% of Java online submissions for Binary Tree Right Side View.
-
-
+        Runtime: 0 ms, faster than 100.00% of Java online submissions for Split Linked List in Parts.
+        Memory Usage: 39.4 MB, less than 22.96% of Java online submissions for Split Linked List in Parts.
      */
 
      // Definition for singly-linked list.
