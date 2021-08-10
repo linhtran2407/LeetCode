@@ -1,18 +1,26 @@
 public class SplitLinkedListInParts {
 
-    /**
-     * Definition for singly-linked list.
-     * public class ListNode {
-     *     int val;
-     *     ListNode next;
-     *     ListNode() {}
-     *     ListNode(int val) { this.val = val; }
-     *     ListNode(int val, ListNode next) { this.val = val; this.next = next; }
-     * }
+    /*
+        @author: Linh Tran
+        @version: Aug 6th, 2021
+
+        Runtime and usage info of brute force solution:
+        Runtime: 0 ms, faster than 100.00% of Java online submissions for Split Linked List in Parts.
+        Memory Usage: 39.4 MB, less than 22.96% of Java online submissions for Split Linked List in Parts.
      */
+
+     // Definition for singly-linked list.
+     public class ListNode {
+         int val;
+         ListNode next;
+         ListNode() {}
+         ListNode(int val) { this.val = val; }
+         ListNode(int val, ListNode next) { this.val = val; this.next = next; }
+     }
+
+    // brute force:
     class Solution {
         public ListNode[] splitListToParts(ListNode head, int k) {
-            // brute force:
             // initialize the result as an array of k sub-linked list
             // go through the array once, for each linked list, put a place holder (new Linked List)
             // to indicate that how many listnodes should be in each sub-linked list
