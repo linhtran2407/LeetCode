@@ -3,6 +3,16 @@ import java.util.Map;
 
 public class SwappingNodesInALinkedList {
 
+    /*
+    @author: Linh Tran
+    @version: Aug 8th, 2021
+
+    Runtime and usage info of the solution:
+    Runtime: 17 ms, faster than 28.43% of Java online submissions for All Elements in Two Binary Search Trees.
+    Memory Usage: 42.5 MB, less than 24.60% of Java online submissions for All Elements in Two Binary Search Trees.
+ */
+    Runtime: 26 ms, faster than 5.46% of Java online submissions for Swapping Nodes in a Linked List.
+    Memory Usage: 53 MB, less than 99.10% of Java online submissions for Swapping Nodes in a Linked List.
 
      // Definition for singly-linked list.
      public class ListNode {
