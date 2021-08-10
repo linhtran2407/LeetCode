@@ -4,6 +4,14 @@ import java.util.List;
 import java.util.Queue;
 
 public class AllElementsInTwoBinarySearchTrees {
+/*
+    @author: Linh Tran
+    @version: Aug 8th, 2021
+
+    Runtime and usage info of the solution:
+    Runtime: 17 ms, faster than 28.43% of Java online submissions for All Elements in Two Binary Search Trees.
+    Memory Usage: 42.5 MB, less than 24.60% of Java online submissions for All Elements in Two Binary Search Trees.
+ */
 
 
      // Definition for a binary tree node.
