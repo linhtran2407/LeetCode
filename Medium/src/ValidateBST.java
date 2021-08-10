@@ -13,9 +13,9 @@ public class ValidateBST {
              this.val = val;
              this.left = left;
              this.right = right;
-     *     }
-     * }
-     */
+         }
+     }
+
     class Solution {
         ArrayList<Integer> arr;
         boolean check;
