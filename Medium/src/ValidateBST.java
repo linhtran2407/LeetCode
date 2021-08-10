@@ -1,10 +1,10 @@
 public class ValidateBST {
 
 
-    /**
-     * Definition for a binary tree node.
-     * public class TreeNode {
-     *     int val;
+
+     // Definition for a binary tree node.
+     public class TreeNode {
+         int val;
      *     TreeNode left;
      *     TreeNode right;
      *     TreeNode() {}
