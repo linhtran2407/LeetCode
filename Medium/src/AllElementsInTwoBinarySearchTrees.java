@@ -13,8 +13,8 @@ public class AllElementsInTwoBinarySearchTrees {
              this.left = left;
              this.right = right;
          }
-     * }
-     */
+     }
+
     class Solution {
         public List<Integer> getAllElements(TreeNode root1, TreeNode root2) {
             // brute force:
