@@ -6,7 +6,7 @@ public class MinimumDistanceBetweenBSTNodes {
 
     Runtime and usage info of the solution:
     Runtime: 0 ms, faster than 100.00% of Java online submissions for Minimum Distance Between BST Nodes.
-    Memory Usage: 36.3 MB, less than 81.38% of Java online submissions for Minimum Distance Between BST Nodes.
+    Memory Usage: 36.7 MB, less than 46.90% of Java online submissions for Minimum Distance Between BST Nodes.
 */
      // Definition for a binary tree node.
       public class TreeNode {
@@ -24,31 +24,35 @@ public class MinimumDistanceBetweenBSTNodes {
 
     class Solution {
         public int minDiffInBST(TreeNode root) {
-            // compare diff between root and its rightmost child in the left-subtree
-            // and between root and its leftmost child in the right-subtree
-            int res = Integer.MAX_VALUE;
+            // in BST, the smallest dff at each node is between its rightmost node
+            // on the left branch with the root, and between its leftmost node
+            // on the right branch with the root
+            // TC: O(N)
+            // SC: for DFS, when tree is skewed, need to contains up to O(N)
 
-            TreeNode leftNode = root.left;
-            TreeNode rightNode = root.right;
-            if (leftNode != null) {
-                res = Math.min(res, minDiffInBST(leftNode));
+            int minDiff = Integer.MAX_VALUE;
+            if (root == null){return minDiff;}
+
+            TreeNode leftChild = root.left;
+            TreeNode rightChild = root.right;
+
+            // recursively go to the left in right branch and
+            // to the right in left branch
+            // while updating the min diff
+            while (leftChild != null){
+                minDiff = Math.min (minDiff, root.val - leftChild.val);
+                leftChild = leftChild.right;
             }
 
-            if (rightNode != null) {
-                res = Math.min(res, minDiffInBST(rightNode));
+            while (rightChild != null){
+                minDiff = Math.min(minDiff, rightChild.val - root.val);
+                rightChild = rightChild.left;
             }
 
-            while(leftNode != null){
-                res = Math.min(res, root.val-leftNode.val);
-                leftNode = leftNode.right;
-            }
+            // compare min diff in 2 branches
+            int smallerBranch = Math.min(minDiffInBST(root.left), minDiffInBST(root.right));
 
-            while(rightNode != null){
-                res = Math.min(res, rightNode.val-root.val);
-                rightNode = rightNode.left;
-            }
-
-            return res;
+            return Math.min(minDiff, smallerBranch);
         }
     }
 }
