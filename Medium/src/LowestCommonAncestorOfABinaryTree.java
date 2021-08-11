@@ -54,6 +54,7 @@ public class LowestCommonAncestorOfABinaryTree {
           }
       }
 
+      // using flag
     class Solution1 {
         TreeNode ans;
         public TreeNode lowestCommonAncestor(TreeNode root, TreeNode p, TreeNode q) {
