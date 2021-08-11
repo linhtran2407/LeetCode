@@ -54,7 +54,7 @@ public class LowestCommonAncestorOfABinaryTree {
           }
       }
 
-      // using flag
+      // using flag (backtrack)
     class Solution1 {
         TreeNode ans;
         public TreeNode lowestCommonAncestor(TreeNode root, TreeNode p, TreeNode q) {
@@ -80,7 +80,7 @@ public class LowestCommonAncestorOfABinaryTree {
         }
     }
 
-    // using parents map (backtrack)
+    // using parents map
     class Solution2 {
         Map<TreeNode, TreeNode> parentMap;
         public TreeNode lowestCommonAncestor(TreeNode root, TreeNode p, TreeNode q) {
