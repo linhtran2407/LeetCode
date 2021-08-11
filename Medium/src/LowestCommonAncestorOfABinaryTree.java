@@ -80,6 +80,7 @@ public class LowestCommonAncestorOfABinaryTree {
         }
     }
 
+    // using parents map
     class Solution2 {
         Map<TreeNode, TreeNode> parentMap;
         public TreeNode lowestCommonAncestor(TreeNode root, TreeNode p, TreeNode q) {
