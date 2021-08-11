@@ -22,7 +22,7 @@ public class MinimumDistanceBetweenBSTNodes {
           }
      }
 
-    class Solution {
+    class Solution1 {
         public int minDiffInBST(TreeNode root) {
             // in BST, the smallest dff at each node is between its rightmost node
             // on the left branch with the root, and between its leftmost node
