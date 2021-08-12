@@ -29,7 +29,7 @@ public class LowestCommonAncestorOfABinaryTree {
           TreeNode(int x) { val = x; }
       }
 
-      // shortest solution, using recursion
+      // Solution 1: shortest solution, using recursion
     class Solution {
           public TreeNode lowestCommonAncestor(TreeNode root, TreeNode p, TreeNode q) {
               // found p and q
