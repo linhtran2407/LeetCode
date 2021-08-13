@@ -4,10 +4,10 @@ public class MaximumDifferenceBetweenNodeAndAncestor {
      public class TreeNode {
          int val;
          TreeNode left;
-     *     TreeNode right;
-     *     TreeNode(int x) { val = x; }
-     * }
-     */
+         TreeNode right;
+         TreeNode(int x) { val = x; }
+     }
+
     class Solution {
         public int maxAncestorDiff(TreeNode root) {
             // travel level-by-level
