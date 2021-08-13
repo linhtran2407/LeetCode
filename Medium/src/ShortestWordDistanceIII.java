@@ -17,7 +17,17 @@ public class ShortestWordDistanceIII {
      * Note: You may assume word1 and word2 are both in the list.
      */
 
-    https://leetcode.com/problems/shortest-word-distance-iii/discuss/67129/clean-short-fast-Java-solution-in-O(N)-time-and-O(1)-space
+    /*
+        @author: Linh Tran
+        @solution-credit: https://leetcode.com/problems/shortest-word-distance-iii/discuss/67129/clean-short-fast-Java-solution-in-O(N)-time-and-O(1)-space
+        @version: Aug 13, 2021
+
+        Runtime and usage info of the solution:
+        Runtime: 12 ms, faster than 28.07% of Java online submissions for Shortest Word Distance III.
+        Memory Usage: 85.3 MB, less than 5.52% of Java online submissions for Shortest Word Distance III.
+    */
+
+
 
     class Solution {
         public int shortestWordDistance(String[] words, String word1, String word2) {
