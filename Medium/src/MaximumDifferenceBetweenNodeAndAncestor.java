@@ -14,9 +14,8 @@ public class MaximumDifferenceBetweenNodeAndAncestor {
      }
 
      // brute force: bfs
-    class Solution {
-        public int maxAncestorDiff(TreeNode root) {
-            // bfs
+    class Solution1 {
+        public int maxAncestorDiff(TreeNode root){
             // travel level-by-level
             // store the pair <child, parent> in an map for backtracking
             // for each child, calculate all the differences among all of its anscestors with itself,
@@ -69,5 +68,9 @@ public class MaximumDifferenceBetweenNodeAndAncestor {
 
             return res;
         }
+    }
+
+    class Solution2 {
+        public int maxAncestorDiff(TreeNode root){
     }
 }
