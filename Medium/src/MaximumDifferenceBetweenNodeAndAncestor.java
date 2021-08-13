@@ -13,6 +13,7 @@ public class MaximumDifferenceBetweenNodeAndAncestor {
          TreeNode(int x) { val = x; }
      }
 
+     // brute force: bfs
     class Solution {
         public int maxAncestorDiff(TreeNode root) {
             // bfs
