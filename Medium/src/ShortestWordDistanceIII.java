@@ -27,8 +27,6 @@ public class ShortestWordDistanceIII {
         Memory Usage: 85.3 MB, less than 5.52% of Java online submissions for Shortest Word Distance III.
     */
 
-
-
     class Solution {
         public int shortestWordDistance(String[] words, String word1, String word2) {
             // idea: go through the array and detect if the current word matches either of the word
