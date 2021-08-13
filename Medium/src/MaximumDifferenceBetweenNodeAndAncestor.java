@@ -1,3 +1,6 @@
+import java.util.HashMap;
+import java.util.Map;
+
 public class MaximumDifferenceBetweenNodeAndAncestor {
 
      // Definition for a binary tree node.
