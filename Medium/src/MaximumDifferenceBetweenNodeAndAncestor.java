@@ -87,9 +87,19 @@ public class MaximumDifferenceBetweenNodeAndAncestor {
         }
     }
 
+    // brute force: dfs using recursion
     class Solution2 {
         public int maxAncestorDiff(TreeNode root){
-
+            // using recursion to traverse the tree in dfs
+            // pass in a list of ancestors as param
+            // once finish assessing both branches of each node
+            // pop it out of the list of ancestors
+            // inside the function, always update max diff
+            // TC: O(N^2)
+            // SC: O(N) since the stack mem can take up to N operations
+            // when the tree is completely skewed
         }
+
+        private int helper(TreeNode )
     }
 }
