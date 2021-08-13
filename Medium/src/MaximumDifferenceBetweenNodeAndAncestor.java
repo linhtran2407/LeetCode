@@ -3,6 +3,23 @@ import java.util.LinkedList;
 import java.util.Map;
 import java.util.Queue;
 
+/*
+        @author: Linh Tran
+        @version: Aug 12, 2021
+
+        Runtime and usage info of first solution:
+        Runtime: 260 ms, faster than 5.10% of Java online submissions for Maximum Difference Between Node and Ancestor.
+        Memory Usage: 39.7 MB, less than 23.64% of Java online submissions for Maximum Difference Between Node and Ancestor.
+
+        Runtime and usage info of second solution:
+        Runtime: 7 ms, faster than 30.95% of Java online submissions for Lowest Common Ancestor of a Binary Tree.
+        Memory Usage: 45.4 MB, less than 5.05% of Java online submissions for Lowest Common Ancestor of a Binary Tree.
+
+        Runtime and usage info of third solution:
+        Runtime: 8 ms, faster than 27.11% of Java online submissions for Lowest Common Ancestor of a Binary Tree.
+        Memory Usage: 41 MB, less than 76.50% of Java online submissions for Lowest Common Ancestor of a Binary Tree.
+*/
+
 public class MaximumDifferenceBetweenNodeAndAncestor {
 
      // Definition for a binary tree node.
@@ -72,5 +89,7 @@ public class MaximumDifferenceBetweenNodeAndAncestor {
 
     class Solution2 {
         public int maxAncestorDiff(TreeNode root){
+
+        }
     }
 }
