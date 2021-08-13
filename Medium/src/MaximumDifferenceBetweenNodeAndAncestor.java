@@ -1,7 +1,4 @@
-import java.util.HashMap;
-import java.util.LinkedList;
-import java.util.Map;
-import java.util.Queue;
+import java.util.*;
 
 /*
         @author: Linh Tran
@@ -89,6 +86,7 @@ public class MaximumDifferenceBetweenNodeAndAncestor {
 
     // brute force: dfs using recursion
     class Solution2 {
+         int ans;
         public int maxAncestorDiff(TreeNode root){
             // using recursion to traverse the tree in dfs
             // pass in a list of ancestors as param
@@ -98,8 +96,20 @@ public class MaximumDifferenceBetweenNodeAndAncestor {
             // TC: O(N^2)
             // SC: O(N) since the stack mem can take up to N operations
             // when the tree is completely skewed
+            ans = 0;
+            ArrayList<TreeNode> ancestors = new ArrayList<>();
+            helper(root, ancestors);
+            return ans;
         }
 
-        private int helper(TreeNode )
+        private int helper(TreeNode node, ArrayList<TreeNode> ancestors){
+            // base case
+            if (node == null) return ans;
+
+            // calc all the differences between the current node and its ancestors
+            for (int i=0; i<ancestors.size(); i++){
+
+            }
+        }
     }
 }
