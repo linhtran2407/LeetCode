@@ -106,10 +106,21 @@ public class MaximumDifferenceBetweenNodeAndAncestor {
             // base case
             if (node == null) return ans;
 
-            // calc all the differences between the current node and its ancestors
+            // calc and update all the differences between the current node and its ancestors
             for (int i=0; i<ancestors.size(); i++){
-
+                ans = Math.max(ans, Math.abs(ancestors.get(i).val - node.val));
             }
+
+            ancestors.add(node);
+            // recursion on left
+            int leftDiff = helper(node.left, ancestors);
+            // recursion on right
+            int rightDiff = helper(node.right, ancestors);
+            // after considering both branches, remove the current node from the list
+            // of ancestors so that it does not interfere with other differences
+            ancestors.remove(ancestors.size()-1);
+
+            return ans;
         }
     }
 }
