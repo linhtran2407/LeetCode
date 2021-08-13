@@ -17,6 +17,8 @@ public class ShortestWordDistanceIII {
      * Note: You may assume word1 and word2 are both in the list.
      */
 
+    https://leetcode.com/problems/shortest-word-distance-iii/discuss/67129/clean-short-fast-Java-solution-in-O(N)-time-and-O(1)-space
+
     class Solution {
         public int shortestWordDistance(String[] words, String word1, String word2) {
             // idea: go through the array and detect if the current word matches either of the word
@@ -32,7 +34,7 @@ public class ShortestWordDistanceIII {
             // then update the difference
             // 4. reset the firstMatch to be the second match and reset the firstIndex to be the index of
             // the second-match word, so that we can continue searching
-            // time complexity: O(N)
+            // time complexity: O(M*N) with N being the number of words in the array, and M being the length of each word for the equals() method
             // space complexity: O(1)
 
             int firstIndex = -1;
