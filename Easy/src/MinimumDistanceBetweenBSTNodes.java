@@ -12,6 +12,7 @@ public class MinimumDistanceBetweenBSTNodes {
     Runtime: 0 ms, faster than 100.00% of Java online submissions for Minimum Distance Between BST Nodes.
     Memory Usage: 36.7 MB, less than 33.21% of Java online submissions for Minimum Distance Between BST Nodes.
 */
+
      // Definition for a binary tree node.
       public class TreeNode {
           int val;
