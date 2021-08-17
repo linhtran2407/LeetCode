@@ -13,8 +13,8 @@ import java.util.*;
         Memory Usage: 40.4 MB, less than 5.91% of Java online submissions for Maximum Difference Between Node and Ancestor.
 
         Runtime and usage info of third solution:
-        Runtime: 8 ms, faster than 27.11% of Java online submissions for Lowest Common Ancestor of a Binary Tree.
-        Memory Usage: 41 MB, less than 76.50% of Java online submissions for Lowest Common Ancestor of a Binary Tree.
+Runtime: 0 ms, faster than 100.00% of Java online submissions for Maximum Difference Between Node and Ancestor.
+Memory Usage: 39 MB, less than 98.40% of Java online submissions for Maximum Difference Between Node and Ancestor.
 */
 
 
