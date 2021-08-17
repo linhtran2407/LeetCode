@@ -125,7 +125,7 @@ public class MaximumDifferenceBetweenNodeAndAncestor {
         }
     }
 
-    class Solution {
+    class Solution3 {
         // algo: record the max and min during the recursion
         // update the answer by the larger value of difference between
         // max and min and the current ans
