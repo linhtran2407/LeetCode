@@ -23,8 +23,8 @@ public class ShortestWordDistanceIII {
         @version: Aug 13, 2021
 
         Runtime and usage info of the solution:
-        Runtime: 12 ms, faster than 28.07% of Java online submissions for Shortest Word Distance III.
-        Memory Usage: 85.3 MB, less than 5.52% of Java online submissions for Shortest Word Distance III.
+        Runtime: 8 ms, faster than 87.90% of Java online submissions for Shortest Word Distance III.
+        Memory Usage: 53 MB, less than 85.79% of Java online submissions for Shortest Word Distance III.
     */
 
 
