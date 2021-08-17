@@ -124,4 +124,36 @@ public class MaximumDifferenceBetweenNodeAndAncestor {
             return ans;
         }
     }
+
+    class Solution {
+        // algo: record the max and min during the recursion
+        // update the answer by the larger value of difference between
+        // max and min and the current ans
+        // TC: O(N) because only need to traverse through the tree once
+        // SC: O(1)
+        int ans;
+        public int maxAncestorDiff(TreeNode root){
+            ans = 0;
+            helper(root, root.val, root.val);
+            return ans;
+        }
+
+        // at each recursion, record the max and min value
+        // return max-min when reach the base case
+        private void helper(TreeNode node, int cur_max, int cur_min){
+            // base case
+            if (node == null){return;}
+
+            // update min and max
+            cur_max = Math.max(cur_max, node.val);
+            cur_min = Math.min(cur_min, node.val);
+
+            // update answer
+            ans = Math.max(ans, cur_max - cur_min);
+
+            // recursion on left and right branches
+            helper(node.left, cur_max, cur_min);
+            helper(node.right, cur_max, cur_min);
+        }
+    }
 }
