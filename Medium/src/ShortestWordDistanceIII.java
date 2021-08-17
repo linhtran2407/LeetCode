@@ -29,40 +29,36 @@ public class ShortestWordDistanceIII {
 
 
     class Solution {
-        public int shortestWordDistance(String[] words, String word1, String word2) {
-            // idea: go through the array and detect if the current word matches either of the word
-            // 1. when it finds the first match (can match either word1 or word2), store that word in
-            // a String variable (named firstMatch for example) and that word's index in an integer variable
-            // (named firstIndex for example)
-            // 2. continue searching through the array until found the second match (again can be word1 or 2)
-            // 3. check if:
-            // the String firstMatch is not null (this means the first match is found already), AND
-            // EITHER (the word found at the 2nd match is not the same as the String firstMatch (for the
-            // case when 2 words given are different, say "coding" and "practice")) OR (word1.equals(word2))
-            //  is true (for the case when 2 words given are th same)
-            // then update the difference
-            // 4. reset the firstMatch to be the second match and reset the firstIndex to be the index of
-            // the second-match word, so that we can continue searching
-            // time complexity: O(M*N) with N being the number of words in the array, and M being the length of each word for the equals() method
-            // space complexity: O(1)
+        public int shortestWordDistance(String[] wordsDict, String word1, String word2) {
 
-            int firstIndex = -1;
-            String firstMatch = null;
+            int len = wordsDict.length;
+            if (len <= 1){return 0;}
+
             int res = Integer.MAX_VALUE;
+            // pointer when found word1 and word2
+            int w1 = -1;
+            int w2 = -1;
 
-            for (int i=0; i<words.length; i++){
-                // check if there is a match
-                if (words[i].equals(word1) || words[i].equals(word2)){
-                    // update if there is previous match and the second match is truly
-                    // the second match, not the duplicate of the first one
-                    if ( firstMatch != null && (word1.equals(word2) || !words[i].equals(firstMatch)) ){
-                        res = Math.min(res, i-firstIndex);
+            // find the match and update res
+            for (int i=0; i<len; i++){
+                // match word1
+                if (wordsDict[i].equals(word1)) {
+                    w1 = i;
+
+                    if (w2 != -1){
+                        res = Math.min(res, w1-w2);
                     }
-
-                    // reset the variables, or set new found if there is no previous match yet
-                    firstIndex = i;
-                    firstMatch = words[i];
                 }
+
+                // match word2
+                if (wordsDict[i].equals(word2)) {
+                    w2 = i;
+
+                    if (w1 != -1 && w2 - w1 != 0){
+                        res = Math.min(res, w2-w1);
+                    }
+                }
+
             }
 
             return res;
