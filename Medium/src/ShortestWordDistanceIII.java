@@ -19,8 +19,7 @@ public class ShortestWordDistanceIII {
 
     /*
         @author: Linh Tran
-        @solution-credit: https://leetcode.com/problems/shortest-word-distance-iii/discuss/67129/clean-short-fast-Java-solution-in-O(N)-time-and-O(1)-space
-        @version: Aug 13, 2021
+        @version: Aug 17, 2021
 
         Runtime and usage info of the solution:
         Runtime: 8 ms, faster than 87.90% of Java online submissions for Shortest Word Distance III.
