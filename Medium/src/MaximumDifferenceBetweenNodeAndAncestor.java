@@ -13,8 +13,8 @@ import java.util.*;
         Memory Usage: 40.4 MB, less than 5.91% of Java online submissions for Maximum Difference Between Node and Ancestor.
 
         Runtime and usage info of third solution:
-Runtime: 0 ms, faster than 100.00% of Java online submissions for Maximum Difference Between Node and Ancestor.
-Memory Usage: 39 MB, less than 98.40% of Java online submissions for Maximum Difference Between Node and Ancestor.
+        Runtime: 0 ms, faster than 100.00% of Java online submissions for Maximum Difference Between Node and Ancestor.
+        Memory Usage: 39 MB, less than 98.40% of Java online submissions for Maximum Difference Between Node and Ancestor.
 */
 
 
