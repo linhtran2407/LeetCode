@@ -4,7 +4,7 @@ import java.util.Map;
 public class DegreeOfAnArray {
 /*
     @author: Linh Tran
-    @version: Aug 05, 2021
+    @version: Aug 28, 2021
 
     Runtime and usage info of DFS solution:
     Runtime: 25 ms, faster than 22.75% of Java online submissions for Degree of an Array.
