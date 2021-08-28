@@ -1,7 +1,10 @@
+import java.util.Map;
+
 public class DegreeOfAnArray {
 
     class Solution {
         public int findShortestSubArray(int[] nums) {
+
             Map<Integer, int[]> map = new HashMap<>();
 
             // store first and last and frequency
