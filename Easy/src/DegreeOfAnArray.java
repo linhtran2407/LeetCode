@@ -3,6 +3,9 @@ import java.util.Map;
 
 public class DegreeOfAnArray {
 
+    Runtime: 25 ms, faster than 22.75% of Java online submissions for Degree of an Array.
+    Memory Usage: 52.1 MB, less than 5.53% of Java online submissions for Degree of an Array.
+
     class Solution {
         public int findShortestSubArray(int[] nums) {
 
