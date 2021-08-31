@@ -10,7 +10,7 @@ public class ReverseLinkedListII {
          ListNode(int val, ListNode next) { this.val = val; this.next = next; }
      }
 
-    class Solution {
+    class Solution_recursion {
 
         private boolean stop;
         private ListNode start;
