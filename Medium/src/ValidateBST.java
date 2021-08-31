@@ -82,10 +82,9 @@ public class ValidateBST {
         }
     }
 
-    class Solution {
+    class Solution_IterativeWithBounds {
 
         public boolean isValidBST(TreeNode root) {
-            // iterative with bounds
             // TC: O(N)
             // SC: O(N)
             Queue<Integer> upper = new LinkedList<>();
