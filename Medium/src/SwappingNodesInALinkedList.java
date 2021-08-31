@@ -22,7 +22,7 @@ public class SwappingNodesInALinkedList {
          ListNode(int val, ListNode next) { this.val = val; this.next = next; }
      }
 
-    class Solution {
+    class Solution1 {
         public ListNode swapNodes(ListNode head, int k) {
             // idea:
             // store the index and node at that index in a table
@@ -50,6 +50,42 @@ public class SwappingNodesInALinkedList {
             node1.val = val2;
             ListNode node2 = map.get(size-k+1);
             node2.val = val1;
+
+            return head;
+        }
+    }
+
+    class Solution2 {
+         // 3 pass solution
+        // k(th) node from the end is at index n-k (index base 1)
+        // TC: O(N)
+        // SC: O(1)
+        public ListNode swapNodes(ListNode head, int k) {
+            int n = 0; // length of linked list
+
+            // find length of linked list
+            ListNode curr = head;
+            while (curr != null){
+                n++;
+                curr = curr.next;
+            }
+
+            // set the start node
+            ListNode front = head;
+            for (int i=1; i<k; i++){
+                front = front.next;
+            }
+
+            // set the end node
+            ListNode end = head;
+            for (int i=1; i<=n-k; i++){
+                end = end.next;
+            }
+
+            // swap start and end nodes
+            int value = front.val;
+            front.val = end.val;
+            end.val = value;
 
             return head;
         }
