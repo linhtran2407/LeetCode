@@ -10,6 +10,7 @@ public class ReverseLinkedListII {
          ListNode(int val, ListNode next) { this.val = val; this.next = next; }
      }
 
+     // iterative
     class Solution {
         public ListNode reverseBetween(ListNode head, int left, int right) {
             // TC: O(N)
