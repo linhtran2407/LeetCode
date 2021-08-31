@@ -60,6 +60,8 @@ public class ValidateBST {
     }
 
     class Solution_recursion{
+        // TC: O(N) to traverse through every node
+        // SC: O(N) for the space required by recursion stack (in case tree is skewed completely)
         public boolean isValidBST(TreeNode root) {
             return dfs(root, Long.MIN_VALUE, Long.MAX_VALUE);
         }
