@@ -7,7 +7,7 @@ public class SwappingNodesInALinkedList {
     @author: Linh Tran
     @version: Aug 8th, 2021
 
-    Runtime and usage info of the solution:
+    Runtime and usage info of the first solution:
     Runtime: 26 ms, faster than 5.46% of Java online submissions for Swapping Nodes in a Linked List.
     Memory Usage: 53 MB, less than 99.10% of Java online submissions for Swapping Nodes in a Linked List.
 
