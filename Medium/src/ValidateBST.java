@@ -63,8 +63,6 @@ public class ValidateBST {
 
     }
 
-
-
     class Solution_recursionWithBounds{
         // TC: O(N) to traverse through every node
         // SC: O(N) for the space required by recursion stack (in case tree is skewed completely)
@@ -82,5 +80,49 @@ public class ValidateBST {
 
             return dfs(root.left, low, root.val) && dfs(root.right, root.val, high);
         }
+    }
+
+    class Solution {
+
+        public boolean isValidBST(TreeNode root) {
+            // iterative with bounds
+            // TC: O(N)
+            // SC: O(N)
+            Queue<Integer> upper = new LinkedList<>();
+            Queue<Integer> lower = new LinkedList<>();
+            upper.offer(null);
+            lower.offer(null);
+            Queue<TreeNode> q = new LinkedList<>(); // for iteration
+            q.offer(root);
+            Integer low, high; // lower and upper bounds
+            TreeNode cur = null;
+
+            while (!q.isEmpty()){
+                cur = q.poll();
+                low = lower.poll();
+                high = upper.poll();
+
+                if (cur == null){continue;}
+                if ((low != null && cur.val <= low) || (high != null && cur.val >= high)){
+                    return false;
+                }
+
+                // update queues and lower/upper bounds
+                if (cur.left != null){
+                    q.add(cur.left);
+                    lower.offer(low);
+                    upper.offer(cur.val);
+                }
+
+                if (cur.right != null){
+                    q.add(cur.right);
+                    lower.offer(cur.val);
+                    upper.offer(high);
+                }
+
+            }
+            return true;
+        }
+
     }
 }
