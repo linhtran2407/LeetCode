@@ -7,11 +7,12 @@ public class ValidateBST {
     @version: Aug 30, 2021
 
     Runtime and usage info of the first solution:
-    Runtime: 0 ms, faster than 100.00% of Java online submissions for Reverse Linked List II.
-    Memory Usage: 38.7 MB, less than 7.54% of Java online submissions for Reverse Linked List II.
+    Runtime: 2 ms, faster than 9.55% of Java online submissions for Validate Binary Search Tree.
+    Memory Usage: 41.1 MB, less than 7.81% of Java online submissions for Validate Binary Search Tree.
 
-Runtime: 1 ms, faster than 32.30% of Java online submissions for Validate Binary Search Tree.
-Memory Usage: 41.3 MB, less than 5.68% of Java online submissions for Validate Binary Search Tree.
+    Runtime and usage info of the second solution:
+    Runtime: 1 ms, faster than 32.30% of Java online submissions for Validate Binary Search Tree.
+    Memory Usage: 41.3 MB, less than 5.68% of Java online submissions for Validate Binary Search Tree.
 
     Runtime and usage info of the third solution:
     Runtime: 0 ms, faster than 100.00% of Java online submissions for Validate Binary Search Tree.
@@ -33,7 +34,7 @@ Memory Usage: 41.3 MB, less than 5.68% of Java online submissions for Validate B
          }
      }
 
-    class Solution {
+    class Solution_InOrderArray {
         ArrayList<Integer> arr;
         boolean check;
         public boolean isValidBST(TreeNode root) {
