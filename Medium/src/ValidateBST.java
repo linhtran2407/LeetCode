@@ -6,11 +6,14 @@ public class ValidateBST {
     @author: Linh Tran
     @version: Aug 30, 2021
 
-    Runtime and usage info of the iterative solution:
+    Runtime and usage info of the first solution:
     Runtime: 0 ms, faster than 100.00% of Java online submissions for Reverse Linked List II.
     Memory Usage: 38.7 MB, less than 7.54% of Java online submissions for Reverse Linked List II.
 
-    Runtime and usage info of the recursive solution:
+Runtime: 1 ms, faster than 32.30% of Java online submissions for Validate Binary Search Tree.
+Memory Usage: 41.3 MB, less than 5.68% of Java online submissions for Validate Binary Search Tree.
+
+    Runtime and usage info of the third solution:
     Runtime: 0 ms, faster than 100.00% of Java online submissions for Validate Binary Search Tree.
     Memory Usage: 40.3 MB, less than 16.32% of Java online submissions for Validate Binary Search Tree.
 */
@@ -59,7 +62,9 @@ public class ValidateBST {
 
     }
 
-    class Solution_recursion{
+
+
+    class Solution_recursionWithBounds{
         // TC: O(N) to traverse through every node
         // SC: O(N) for the space required by recursion stack (in case tree is skewed completely)
         public boolean isValidBST(TreeNode root) {
