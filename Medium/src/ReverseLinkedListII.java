@@ -68,52 +68,39 @@ public class ReverseLinkedListII {
         }
     }
 
-     // iterative
     class Solution {
         public ListNode reverseBetween(ListNode head, int left, int right) {
-            // TC: O(N)
-            // SC: O(1)
+            // special case
+            if (head == null){return null;}
 
-            if (left == right){return head;}
-
-            ListNode curr = head; // used for traversal
-            int count = 1;
-            ListNode prevLeft = null;
-
-            // find left node and store its prev node
-            while (count < left){
-                prevLeft = curr;
-                curr = curr.next;
-                count++;
+            // move pointers until they reach the proper starting point
+            ListNode cur = head, prev = null;
+            while (left > 1){
+                prev = cur;
+                cur = cur.next;
+                left--;
+                right--;
             }
 
-            ListNode leftNode = curr;
-
-            ListNode rightNext = null;
-            ListNode prev = prevLeft;
-
-            // reverse until find right node and store rightNext
-            while (count <= right){
-                // reverse
-                rightNext = curr.next;
-                curr.next = prev;
-                prev = curr;
-                curr = rightNext;
-
-                // update
-                count++;
+            // start reversing
+            ListNode prevLeft = prev, leftNode = cur;
+            while (right > 0){
+                ListNode nextCur = cur.next;
+                cur.next = prev;
+                prev = cur;
+                cur = nextCur;
+                right--;
             }
 
-            ListNode rightNode = prev;
-
-            // connect right node with prevLeft and left node with rightNext
+            // connect the sub-linkedlist with the remaining part in linked list
+            // in a proper way
             if (prevLeft != null){
-                prevLeft.next = rightNode;
+                prevLeft.next = prev;
             } else {
-                head = rightNode;
+                head = prev;
             }
 
-            leftNode.next = rightNext;
+            leftNode.next = cur;
 
             return head;
         }
