@@ -23,7 +23,8 @@ public class ReverseLinkedListII {
      }
 
     class Solution_recursion {
-
+        // TC: O(N)
+        // SC: O(N)
         private boolean stop;
         private ListNode start;
 

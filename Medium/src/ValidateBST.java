@@ -46,4 +46,21 @@ public class ValidateBST {
         }
 
     }
+
+    class Solution_recursion{
+        public boolean isValidBST(TreeNode root) {
+            return dfs(root, Long.MIN_VALUE, Long.MAX_VALUE);
+        }
+
+        private boolean dfs(TreeNode root, long low, long high){
+            if (root == null){return true;}
+
+            // check valid range
+            if (root.val <= low || root.val >= high){
+                return false;
+            }
+
+            return dfs(root.left, low, root.val) && dfs(root.right, root.val, high);
+        }
+    }
 }
