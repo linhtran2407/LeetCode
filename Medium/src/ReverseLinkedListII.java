@@ -30,9 +30,7 @@ public class ReverseLinkedListII {
                 return;
             }
 
-            if (right > 1){
-                end = end.next;
-            }
+            end = end.next;
 
             if (left > 1){
                 this.start = this.start.next;
