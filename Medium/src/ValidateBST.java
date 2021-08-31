@@ -19,6 +19,10 @@ public class ValidateBST {
     Runtime and usage info of the third solution:
     Runtime: 0 ms, faster than 100.00% of Java online submissions for Validate Binary Search Tree.
     Memory Usage: 40.3 MB, less than 16.32% of Java online submissions for Validate Binary Search Tree.
+
+    Runtime and usage info of the fourth solution:
+    Runtime: 4 ms, faster than 6.66% of Java online submissions for Validate Binary Search Tree.
+    Memory Usage: 41.9 MB, less than 5.68% of Java online submissions for Validate Binary Search Tree.
 */
 
 
