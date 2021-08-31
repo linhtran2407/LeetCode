@@ -1,5 +1,17 @@
 public class ReverseLinkedListII {
 
+/*
+    @author: Linh Tran
+    @version: Aug 30, 2021
+
+    Runtime and usage info of the first solution:
+    Runtime: 0 ms, faster than 100.00% of Java online submissions for Reverse Linked List II.
+    Memory Usage: 38.7 MB, less than 7.54% of Java online submissions for Reverse Linked List II.
+
+    Runtime and usage info of the second solution:
+    Runtime: 0 ms, faster than 100.00% of Java online submissions for Minimum Distance Between BST Nodes.
+    Memory Usage: 36.7 MB, less than 33.21% of Java online submissions for Minimum Distance Between BST Nodes.
+*/
 
      // Definition for singly-linked list.
      public class ListNode {
