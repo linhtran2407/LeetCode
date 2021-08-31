@@ -68,7 +68,7 @@ public class ReverseLinkedListII {
         }
     }
 
-    class Solution {
+    class Solution_iterative {
         public ListNode reverseBetween(ListNode head, int left, int right) {
             // special case
             if (head == null){return null;}
