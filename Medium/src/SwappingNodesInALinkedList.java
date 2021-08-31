@@ -94,4 +94,38 @@ public class SwappingNodesInALinkedList {
             return head;
         }
     }
+
+    class Solution3 {
+        public ListNode swapNodes(ListNode head, int k) {
+            int len = 0;
+
+            ListNode curr = head, front = head, end = null;
+
+            while (curr != null){
+                len++;
+
+                // found k(th) node from beginning
+                if (len == k){
+                    front = curr;
+                    end = head;
+                }
+
+                // push end node along so that when curr reaches the end
+                // end node will be at k(th) node from the end
+                if (len > k){
+                    end = end.next;
+                }
+
+                // update
+                curr = curr.next;
+            }
+
+            // swap
+            int temp = front.val;
+            front.val = end.val;
+            end.val = temp;
+
+            return head;
+        }
+    }
 }
