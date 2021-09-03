@@ -3,7 +3,7 @@ public class MinimumNumberOfDaysToMakeMBouquets {
     @author: Linh Tran
     @version: July 02, 2021
 
-    Runtime and usage info of the first solution:
+    Runtime and usage info of the solution:
     Runtime: 52 ms, faster than 6.88% of Java online submissions for Minimum Number of Days to Make m Bouquets.
     Memory Usage: 88 MB, less than 15.34% of Java online submissions for Minimum Number of Days to Make m Bouquets.
 */
