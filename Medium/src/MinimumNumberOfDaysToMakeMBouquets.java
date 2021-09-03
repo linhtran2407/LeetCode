@@ -8,7 +8,6 @@ public class MinimumNumberOfDaysToMakeMBouquets {
     Memory Usage: 88 MB, less than 15.34% of Java online submissions for Minimum Number of Days to Make m Bouquets.
 */
 
-
     class Solution {
         public int minDays(int[] bloomDay, int m, int k) {
             // binary search on the range [smallest num, largest num] in bloomDay array
