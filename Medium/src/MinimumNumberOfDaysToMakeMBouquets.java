@@ -1,4 +1,17 @@
 public class MinimumNumberOfDaysToMakeMBouquets {
+    /*
+    @author: Linh Tran
+    @version: July 02, 2021
+
+    Runtime and usage info of the first solution:
+    Runtime: 0 ms, faster than 100.00% of Java online submissions for Minimum Distance Between BST Nodes.
+    Memory Usage: 36.7 MB, less than 46.90% of Java online submissions for Minimum Distance Between BST Nodes.
+
+    Runtime and usage info of the second solution:
+    Runtime: 0 ms, faster than 100.00% of Java online submissions for Minimum Distance Between BST Nodes.
+    Memory Usage: 36.7 MB, less than 33.21% of Java online submissions for Minimum Distance Between BST Nodes.
+*/
+
 
     class Solution {
         public int minDays(int[] bloomDay, int m, int k) {
