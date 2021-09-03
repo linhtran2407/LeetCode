@@ -2,6 +2,17 @@ import java.util.*;
 
 public class MinimumHeightTrees {
 
+        /*
+    @author: Linh Tran
+    @version: Sep 02, 2021
+
+    Runtime and usage info of the solution:
+    Runtime: 84 ms, faster than 8.85% of Java online submissions for Minimum Height Trees.
+    Memory Usage: 61.9 MB, less than 5.05% of Java online submissions for Minimum Height Trees.
+*/
+
+
+
     class Solution {
         public List<Integer> findMinHeightTrees(int n, int[][] edges) {
             // algo:
