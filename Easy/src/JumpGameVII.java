@@ -7,8 +7,8 @@ public class JumpGameVII {
     @version: Sep 04, 2021
 
     Runtime and usage info of the solution:
-    Runtime: 52 ms, faster than 6.88% of Java online submissions for Minimum Number of Days to Make m Bouquets.
-    Memory Usage: 88 MB, less than 15.34% of Java online submissions for Minimum Number of Days to Make m Bouquets.
+Runtime: 14 ms, faster than 52.98% of Java online submissions for Jump Game VII.
+Memory Usage: 45.9 MB, less than 51.69% of Java online submissions for Jump Game VII.
 */
 
 
