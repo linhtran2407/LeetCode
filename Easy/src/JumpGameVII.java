@@ -2,6 +2,14 @@ import java.util.LinkedList;
 import java.util.Queue;
 
 public class JumpGameVII {
+    /*
+    @author: https://leetcode.com/morning_coder/
+    @version: Sep 04, 2021
+
+    Runtime and usage info of the solution:
+    Runtime: 52 ms, faster than 6.88% of Java online submissions for Minimum Number of Days to Make m Bouquets.
+    Memory Usage: 88 MB, less than 15.34% of Java online submissions for Minimum Number of Days to Make m Bouquets.
+*/
 
 
     class Solution {
