@@ -1,4 +1,14 @@
 public class KthSmallestElementInASortedMatrix {
+    /*
+    @author: Linh Tran
+    @version: Sep 05, 2021
+
+    Runtime and usage info of the solution:
+    Runtime: 0 ms, faster than 100.00% of Java online submissions for Kth Smallest Element in a Sorted Matrix.
+    Memory Usage: 44.7 MB, less than 33.03% of Java online submissions for Kth Smallest Element in a Sorted Matrix.
+*/
+
+
     class Solution {
         int n;
         public int kthSmallest(int[][] matrix, int k) {
