@@ -1,7 +1,7 @@
 public class FindTheDuplicateNumber {
     /*
     @author: Linh Tran
-    @version: July 02, 2021
+    @version: Sep 04, 2021
 
     Runtime and usage info of the solution:
     Runtime: 21 ms, faster than 35.63% of Java online submissions for Find the Duplicate Number.
