@@ -1,4 +1,13 @@
 public class FindTheDuplicateNumber {
+    /*
+    @author: Linh Tran
+    @version: July 02, 2021
+
+    Runtime and usage info of the solution:
+    Runtime: 21 ms, faster than 35.63% of Java online submissions for Find the Duplicate Number.
+    Memory Usage: 56.9 MB, less than 44.59% of Java online submissions for Find the Duplicate Number.
+*/
+
     class Solution {
         public int findDuplicate(int[] nums) {
             int low = 1;
