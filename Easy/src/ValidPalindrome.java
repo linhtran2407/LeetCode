@@ -2,6 +2,7 @@ public class ValidPalindrome {
 /*
     @author: Linh Tran
     @version: June 7th, 2021
+
     Runtime and usage info:
     Runtime: 3 ms, faster than 66.76% of Java online submissions for Valid Palindrome.
     Memory Usage: 40.1 MB, less than 25.42% of Java online submissions for Valid Palindrome.
