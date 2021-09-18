@@ -14,7 +14,7 @@ public class JumpGame {
             // greedy
             // check from the end to see if at each index, we can reach the furthest current index
 
-            // TC: O(N)
+            // TC: O(N) for the loop
             // SC: O(1)
             int lastPosition = nums.length-1;
             for (int i = nums.length-1; i >= 0; i--){
