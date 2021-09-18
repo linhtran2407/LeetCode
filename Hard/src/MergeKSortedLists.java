@@ -40,7 +40,7 @@ public class MergeKSortedLists {
 
                 ListNode nextNodeInList = curr.next;
                 if (nextNodeInList != null){
-                    pq.offer(nextNodeInList)
+                    pq.offer(nextNodeInList);
                 }
             }
         }
