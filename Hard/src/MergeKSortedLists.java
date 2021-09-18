@@ -44,6 +44,9 @@ public class MergeKSortedLists {
                     pq.offer(nextNodeInList);
                 }
             }
+
+
+            return head.next;
         }
      }
 }
