@@ -31,10 +31,6 @@ import java.util.Comparator;
 import java.util.PriorityQueue;
 
 public class MeetingRoomsII {
-    public static void main(String[] args) {
-        minMeetingRooms(new int[][] { new int[] { 1, 2 } });
-    }
-
     public static int minMeetingRooms(int[][] intervals) {
         // sort the array based on the starting time
         Arrays.sort(intervals, Comparator.comparingInt(o -> o[0]));
@@ -50,8 +46,6 @@ public class MeetingRoomsII {
             // otherwise, add new room
             pq.add(itv);
         }
-
-        System.out.println("DFAS");
 
         return pq.size();
     }
