@@ -30,7 +30,7 @@ public class MergeKSortedLists {
                 public int compare(ListNode o1, ListNode o2) {
                     return o1.val - o2.val;
                 }
-            }
+            };
 
             Queue<ListNode> pq = new PriorityQueue<ListNode>(comp);
             // initialize heap with k head nodes in k lists
