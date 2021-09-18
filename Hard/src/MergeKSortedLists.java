@@ -3,7 +3,8 @@ import java.util.PriorityQueue;
 import java.util.Queue;
 
 public class MergeKSortedLists {
-
+    Runtime: 9 ms, faster than 31.60% of Java online submissions for Merge k Sorted Lists.
+    Memory Usage: 44.2 MB, less than 25.59% of Java online submissions for Merge k Sorted Lists.
      // Definition for singly-linked list.
      public class ListNode {
          int val;
