@@ -13,6 +13,7 @@ public class JumpGame {
                 }
             }
 
+            // true if can go back to the first index
             return lastPosition == 0;
         }
     }
