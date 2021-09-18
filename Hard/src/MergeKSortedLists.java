@@ -35,6 +35,7 @@ public class MergeKSortedLists {
             ListNode curr = head;
 
             while (!pq.isEmpty()){
+                // build result with min node in pq
                 curr.next = pq.poll();
                 curr = curr.next;
 
