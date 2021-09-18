@@ -31,12 +31,16 @@ import java.util.Comparator;
 import java.util.PriorityQueue;
 
 public class MeetingRoomsII {
-    public int minMeetingRooms (int[][] intervals) {
+    public static void main(String[] args) {
+        minMeetingRooms(new int[][] { new int[] { 1, 2 } });
+    }
+
+    public static int minMeetingRooms(int[][] intervals) {
         // sort the array based on the starting time
         Arrays.sort(intervals, Comparator.comparingInt(o -> o[0]));
         // sort the queue based on ending time
         PriorityQueue<int[]> pq = new PriorityQueue<>(Comparator.comparingInt(o -> o[1]));
-        for (int[] itv: intervals) {
+        for (int[] itv : intervals) {
             // if a room is occupied and the ending time of the current meeting in
             // that room is before the starting time of the other meeting
             // then we do not need another room
@@ -46,6 +50,8 @@ public class MeetingRoomsII {
             // otherwise, add new room
             pq.add(itv);
         }
+
+        System.out.println("DFAS");
 
         return pq.size();
     }
