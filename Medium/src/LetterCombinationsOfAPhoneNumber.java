@@ -1,14 +1,15 @@
 public class LetterCombinationsOfAPhoneNumber {
     public static void main() {
-        
-        System.out.println(letterCombinations("123");
+        List<String> res = letterCombinations("123");
+
+        System.out.println();
     }
 
-    private List<String> combinations = new ArrayList<>();
+    private static List<String> combinations = new ArrayList<>();
     private Map<Character, String> map = Map.of('2', "abc", '3', "def", '4', "ghi", '5', "jkl", '6', "mno", '7', "pqrs",
             '8', "tuv", '9', "wxyz");
 
-    public List<String> letterCombinations(String digits) {
+    public static List<String> letterCombinations(String digits) {
         // back track
         // recursion
         // if stringbuilder == length of digits -> add to result and return
