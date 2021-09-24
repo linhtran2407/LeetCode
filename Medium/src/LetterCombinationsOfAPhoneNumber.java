@@ -1,8 +1,9 @@
+import java.util.*;
+
 public class LetterCombinationsOfAPhoneNumber {
     public static void main() {
         List<String> res = letterCombinations("123");
-
-        System.out.println();
+        System.out.println(res);
     }
 
     private static List<String> combinations = new ArrayList<>();
