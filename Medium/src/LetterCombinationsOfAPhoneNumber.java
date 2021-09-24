@@ -19,6 +19,9 @@ public class LetterCombinationsOfAPhoneNumber {
         // append it to a stringbuilder
         // increase the index to move on to the next digit
         // remove the last char in the strinbuilder for backtracking
+        // TC: O(M^N * N) with M being the maximum length of a value in map, which is
+        // specifically 4 in this case
+        // SC: O(1)
 
         // base case
         if (digits.length() == 0) {
