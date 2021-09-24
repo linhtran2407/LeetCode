@@ -28,7 +28,7 @@ public class LetterCombinationsOfAPhoneNumber {
         return combinations;
     }
 
-    private void backtrack(String digits, int index, StringBuilder sb) {
+    private static void backtrack(String digits, int index, StringBuilder sb) {
         // base case
         // finish a combination
         if (sb.length() == digits.length()) {
