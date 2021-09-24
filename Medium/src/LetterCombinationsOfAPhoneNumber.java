@@ -1,6 +1,6 @@
 public class LetterCombinationsOfAPhoneNumber {
     public static void main() {
-        System.out.println(x);
+        System.out.println(letterCombinations);
     }
 
     private List<String> combinations = new ArrayList<>();
