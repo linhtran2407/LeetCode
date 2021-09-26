@@ -3,10 +3,11 @@ class SearchInRotatedSortedArray {
     /*
      * @author: Linh Tran
      * 
-     * @version: Sep 26th, 2021 Runtime and usage info: Runtime: 2 ms, faster than
-     * 6.96% of Java online submissions for Search in Rotated Sorted Array. Memory
-     * Usage: 38 MB, less than 92.44% of Java online submissions for Search in
-     * Rotated Sorted Array.
+     * @version: Sep 26th, 2021
+     * 
+     * Runtime and usage info: Runtime: 2 ms, faster than 6.96% of Java online
+     * submissions for Search in Rotated Sorted Array. Memory Usage: 38 MB, less
+     * than 92.44% of Java online submissions for Search in Rotated Sorted Array.
      */
 
     // using 2 binary search
