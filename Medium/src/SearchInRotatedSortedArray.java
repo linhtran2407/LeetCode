@@ -1,4 +1,10 @@
 class SearchInRotatedSortedArray {
+    // using 2 binary search
+    // 1 to find the rotation index
+    // 2 to find the target
+    // TC: O(logN)
+    // SC: O(1)
+
     int[] nums;
     int target;
 
