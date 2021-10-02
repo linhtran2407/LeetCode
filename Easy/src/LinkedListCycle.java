@@ -1,4 +1,13 @@
 public class LinkedListCycle {
+    /*
+     * @author: Linh Tran
+     * 
+     * @version: Oct 2nd, 2021
+     * 
+     * Runtime and usage info of the solution: Runtime: 1 ms, faster than 33.78% of
+     * Java online submissions for Linked List Cycle. Memory Usage: 40.2 MB, less
+     * than 56.93% of Java online submissions for Linked List Cycle.
+     */
 
     // Definition for singly-linked list.
     class ListNode {
