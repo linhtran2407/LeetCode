@@ -23,7 +23,7 @@ public class CombinationSum {
 
         for (int i = start; i < candidates.length; i++) {
             comb.add(candidates[i]);
-            backtrack(candidates, remain - candidates[i], start, comb);
+            backtrack(candidates, remain - candidates[i], i, comb);
             //
             comb.removeLast();
         }
