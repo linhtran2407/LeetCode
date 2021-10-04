@@ -1,4 +1,19 @@
 public class LinkedListCycleII {
+
+    /*
+     * @author: Linh Tran
+     * 
+     * @version: Oct 3rd, 2021
+     * 
+     * Runtime and usage info of DFS solution: Runtime: 25 ms, faster than 89.57% of
+     * Java online submissions for Clone Graph. Memory Usage: 38.9 MB, less than
+     * 90.14% of Java online submissions for Clone Graph.
+     * 
+     * Runtime and usage info of BFS solution: Runtime: 25 ms, faster than 89.57% of
+     * Java online submissions for Clone Graph. Memory Usage: 39.2 MB, less than
+     * 44.38% of Java online submissions for Clone Graph.
+     */
+
     /**
      * Definition for singly-linked list. class ListNode { int val; ListNode next;
      * ListNode(int x) { val = x; next = null; } }
