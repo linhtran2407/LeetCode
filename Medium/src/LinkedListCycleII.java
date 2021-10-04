@@ -5,9 +5,13 @@ public class LinkedListCycleII {
      * 
      * @version: Oct 3rd, 2021
      * 
-     * Runtime and usage info of the solution: Runtime: 0 ms, faster than 100.00% of
-     * Java online submissions for Linked List Cycle II. Memory Usage: 38.8 MB, less
-     * than 86.28% of Java online submissions for Linked List Cycle II.
+     * Runtime and usage info of the solution:
+     * 
+     * Runtime: 0 ms, faster than 100.00% of Java online submissions for Linked List
+     * Cycle II.
+     * 
+     * Memory Usage: 38.8 MB, less than 86.28% of Java online submissions for Linked
+     * List Cycle II.
      */
 
     /**
