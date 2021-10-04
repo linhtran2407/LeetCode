@@ -8,10 +8,6 @@ public class LinkedListCycleII {
      * Runtime and usage info of DFS solution: Runtime: 25 ms, faster than 89.57% of
      * Java online submissions for Clone Graph. Memory Usage: 38.9 MB, less than
      * 90.14% of Java online submissions for Clone Graph.
-     * 
-     * Runtime and usage info of BFS solution: Runtime: 25 ms, faster than 89.57% of
-     * Java online submissions for Clone Graph. Memory Usage: 39.2 MB, less than
-     * 44.38% of Java online submissions for Clone Graph.
      */
 
     /**
