@@ -1,5 +1,7 @@
 import java.util.*;
 
+import jdk.internal.org.jline.reader.Candidate;
+
 public class CombinationSum {
     List<List<Integer>> res;
 
@@ -17,6 +19,13 @@ public class CombinationSum {
             return;
         } else if (remain < 0) {
             return;
+        }
+
+        for (int i = start; i < candidates.length; i++) {
+            comb.add(candidates[i]);
+            backtrack(candidates, remain - candidates[i], start, comb);
+            //
+            comb.removeLast();
         }
     }
 }
