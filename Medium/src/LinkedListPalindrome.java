@@ -1,7 +1,6 @@
 import java.util.*;
 
-class Program {
-  // This is an input class. Do not edit.
+class LinkedListPalindrome {
   public static class LinkedList {
     public int value;
     public LinkedList next;
@@ -14,7 +13,7 @@ class Program {
 
   public boolean linkedListPalindrome(LinkedList head) {
 		int len = length(head);
-    if (len <= 1){
+        if (len <= 1){
 			return true;
 		}
 		
