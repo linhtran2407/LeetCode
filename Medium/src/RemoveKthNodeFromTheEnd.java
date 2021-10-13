@@ -24,7 +24,6 @@ class RemoveKthNodeFromEnd {
 			prev.next = cur.next != null? cur.next : null;
 		} else {
 			// remove head
-			System.out.println("ruN");
 			head.value = head.next.value;
 			head.next = head.next.next;
 		}
@@ -53,7 +52,4 @@ class RemoveKthNodeFromEnd {
       this.value = value;
     }
   }
-}
-class RemoveKthNodeFromTheEnd {
-    
 }
