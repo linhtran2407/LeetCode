@@ -1,6 +1,6 @@
 import java.util.*;
 
-class Program {
+class RemoveKthNodeFromEnd {
   public static void removeKthNodeFromEnd(LinkedList head, int k) {
 		int len = length(head);
 		
