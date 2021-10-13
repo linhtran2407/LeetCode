@@ -1,5 +1,9 @@
 import java.util.*;
-
+/*
+     * @author: Linh Tran
+     * 
+     * @version: Oct 10th, 2021
+     */
 class RemoveKthNodeFromEnd {
   public static void removeKthNodeFromEnd(LinkedList head, int k) {
 		int len = length(head);
