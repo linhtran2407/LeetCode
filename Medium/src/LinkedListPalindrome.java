@@ -1,5 +1,11 @@
 import java.util.*;
 
+/*
+     * @author: Linh Tran
+     * 
+     * @version: Oct 12th, 2021
+     */
+
 class LinkedListPalindrome {
   public static class LinkedList {
     public int value;
