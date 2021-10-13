@@ -1,5 +1,9 @@
 import java.util.*;
-
+/*
+     * @author: Linh Tran
+     * 
+     * @version: Oct 12th, 2021
+     */
 class NodeSwap {
   // This is an input class. Do not edit.
   public static class LinkedList {
