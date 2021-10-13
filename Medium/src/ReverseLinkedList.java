@@ -17,13 +17,12 @@ public class ReverseLinkedList {
         return prev;
       }
     
-      static class LinkedList {
-        int value;
-        LinkedList next = null;
-    
-        public LinkedList(int value) {
-          this.value = value;
-        }
-      }
+    static class LinkedList {
+    int value;
+    LinkedList next = null;
+
+    public LinkedList(int value) {
+        this.value = value;
+    }
     }
 }
