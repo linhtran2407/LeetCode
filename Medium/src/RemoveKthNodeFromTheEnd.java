@@ -25,15 +25,11 @@ class RemoveKthNodeFromEnd {
 		}
 		
 		if (prev != null){
-			prev.next = cur.next != null? cur.next : null;
+			prev.next = cur.next;
 		} else {
 			// remove head
 			head.value = head.next.value;
 			head.next = head.next.next;
-		}
-		LinkedList temp = head;
-		while (temp!=null){
-			temp = temp.next;
 		}
   }
 	
