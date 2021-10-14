@@ -1,5 +1,3 @@
-import java.util.*;
-
 class ShiftLinkedList {
   public static LinkedList shiftLinkedList(LinkedList head, int k) {
 		int len = 1;
