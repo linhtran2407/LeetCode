@@ -1,5 +1,6 @@
 class CountUnhappyFriends {
     public int unhappyFriends(int n, int[][] preferences, int[][] pairs) {
+        // TC: O(N^2), SC: O(N^2)
         // for each pair
         //  for each person in the pair
         //      check if its partner is on the first of its pref list
