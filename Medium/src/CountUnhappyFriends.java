@@ -1,4 +1,4 @@
-class Solution {
+class CountUnhappyFriends {
     public int unhappyFriends(int n, int[][] preferences, int[][] pairs) {
         // for each pair
         //  for each person in the pair
