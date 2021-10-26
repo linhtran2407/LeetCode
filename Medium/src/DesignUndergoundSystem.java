@@ -1,4 +1,5 @@
 import java.util.*;
+
 class DesignUndergoundSystem {
     // discuss:
         // maintain data in permanent medium - database
@@ -10,7 +11,7 @@ class DesignUndergoundSystem {
         private HashMap<Integer, Pair<String, Integer>> checkInMap;
         private HashMap<String, Pair<Integer, Integer>> travelTime;
         
-        public UndergroundSystem() {
+        public DesignUndergoundSystem() {
             checkInMap = new HashMap<>();
             travelTime = new HashMap<>();
         }
