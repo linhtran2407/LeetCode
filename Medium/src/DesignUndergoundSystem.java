@@ -1,6 +1,15 @@
 import java.util.*;
 
 class DesignUndergoundSystem {
+    // TC: O(1) for all 3 methods - only getting and updating 2 hashmaps
+    // SC: 
+    // let P be the number of all passengers checkin-out at the peak time
+    // let S be the number of all stations in the network
+    // for checkInMap, at peak time, at most P passengers check in --> O(P)
+    // for travelTime, suppose each station in S has a pair with another, which creates
+    // an entry in our hashmap, then there are S^2 pairs --> O(S^2)
+    // Overall SC is O(P + S^2)
+    
     // discuss:
         // maintain data in permanent medium - database
         // concurrency when thousands of checkins-checkouts per second
