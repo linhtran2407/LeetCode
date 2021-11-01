@@ -1,4 +1,6 @@
-class Solution {
+import java.util.*;
+
+class DecodeString {
     public String decodeString(String s) {        
         char[] str = s.toCharArray();
         Stack<String> stack = new Stack<>();
