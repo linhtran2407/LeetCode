@@ -1,5 +1,13 @@
 import java.util.*;
+    /*
+    @author: Linh Tran
+    @version: Nov 1st, 2021
 
+    Runtime and usage info:
+    Runtime: 2 ms, faster than 49.07% of Java online submissions for Decode String.
+    Memory Usage: 37.5 MB, less than 60.24% of Java online submissions for Decode String.
+
+*/
 class DecodeString {
     public String decodeString(String s) {        
         char[] str = s.toCharArray();
