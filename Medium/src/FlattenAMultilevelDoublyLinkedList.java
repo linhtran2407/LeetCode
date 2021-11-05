@@ -1,3 +1,6 @@
+// Runtime: 0 ms, faster than 100.00% of Java online submissions for Flatten a Multilevel Doubly Linked List.
+// Memory Usage: 36.8 MB, less than 97.13% of Java online submissions for Flatten a Multilevel Doubly Linked List.
+
 public class FlattenAMultilevelDoublyLinkedList {
     Node tail = null;
     public Node flatten(Node head) {
