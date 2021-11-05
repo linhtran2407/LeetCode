@@ -1,4 +1,8 @@
 import java.util.*;
+
+// Runtime: 20 ms, faster than 60.79% of Java online submissions for Design A Leaderboard.
+// Memory Usage: 39 MB, less than 83.74% of Java online submissions for Design A Leaderboard.
+
 class Leaderboard {
     // hashmap: addScore + reset in O(1)
     // heap sort k top entries: O(KlogN)
