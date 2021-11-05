@@ -1,5 +1,6 @@
 import java.util.*;
-
+// Runtime: 2 ms, faster than 95.62% of Java online submissions for All Paths From Source to Target.
+// Memory Usage: 41 MB, less than 58.99% of Java online submissions for All Paths From Source to Target.
 public class AllPathsFromSourceToTarget {
 
         public List<List<Integer>> allPathsSourceTarget(int[][] graph) {
