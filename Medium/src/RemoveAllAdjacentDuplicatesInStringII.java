@@ -1,5 +1,7 @@
 public class RemoveAllAdjacentDuplicatesInStringII {
     
+//     Runtime: 25 ms, faster than 60.84% of Java online submissions for Remove All Adjacent Duplicates in String II.
+// Memory Usage: 39.7 MB, less than 73.86% of Java online submissions for Remove All Adjacent Duplicates in String II.
         public String removeDuplicates(String s, int k) {
     
             StringBuilder sb = new StringBuilder(s);
