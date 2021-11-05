@@ -1,3 +1,4 @@
+import java.util.*;
 class Leaderboard {
     // hashmap: addScore + reset in O(1)
     // heap sort k top entries: O(KlogN)
