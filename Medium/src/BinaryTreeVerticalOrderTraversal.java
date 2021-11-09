@@ -18,6 +18,23 @@ public class BinaryTreeVerticalOrderTraversal {
            this.right = right;
        }
     }
+
+    public class Pair{
+        TreeNode key;
+        int value;
+        public Pair (TreeNode key, int value){
+            this.key = key;
+            this.value = value;
+        }
+
+        public TreeNode getKey(){
+            return this.key;
+        }
+
+        public int getValue(){
+            return this.value;
+        }
+    }
  
     public List<List<Integer>> verticalOrder(TreeNode root) {
         List<List<Integer>> res = new ArrayList<>();
