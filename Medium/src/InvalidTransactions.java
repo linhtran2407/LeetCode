@@ -2,6 +2,13 @@ public class InvalidTransactions {
 
 //  Runtime: 7 ms, faster than 98.07% of Java online submissions for Invalid Transactions.
 //  Memory Usage: 39.9 MB, less than 62.05% of Java online submissions for Invalid Transactions.
+// TC:
+// build the hashmap: O(N)
+// for each transaction, check against all others made by the same user
+// if only 1 user -> O(N^2)
+// Total: O(N^2)
+// SC:
+// map -> O(N)
     class Transaction {
         String name;
         int time;
