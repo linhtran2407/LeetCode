@@ -1,5 +1,8 @@
 public class BinaryTreeVerticalOrderTraversal {
-    
+//     Runtime: 2 ms, faster than 93.79% of Java online submissions for Binary Tree Vertical Order Traversal.
+// Memory Usage: 39 MB, less than 89.03% of Java online submissions for Binary Tree Vertical Order Traversal.
+// TC: O(N) for traversing through all nodes in trees
+// SC: O(N) for storing all nodes in columnTable
     public class TreeNode {
        int val;
        TreeNode left;
