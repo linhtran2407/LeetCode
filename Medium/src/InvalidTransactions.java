@@ -1,5 +1,7 @@
 public class InvalidTransactions {
 
+//  Runtime: 7 ms, faster than 98.07% of Java online submissions for Invalid Transactions.
+//  Memory Usage: 39.9 MB, less than 62.05% of Java online submissions for Invalid Transactions.
     class Transaction {
         String name;
         int time;
