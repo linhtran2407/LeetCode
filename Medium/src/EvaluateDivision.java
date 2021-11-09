@@ -1,5 +1,8 @@
 import java.util.*;
 
+// Runtime: 1 ms, faster than 92.14% of Java online submissions for Evaluate Division.
+// Memory Usage: 37.9 MB, less than 62.65% of Java online submissions for Evaluate Division.
+
 public class EvaluateDivision {
     class Edge{
         String val;
