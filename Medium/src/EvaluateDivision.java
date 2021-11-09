@@ -2,6 +2,17 @@ import java.util.*;
 
 // Runtime: 1 ms, faster than 92.14% of Java online submissions for Evaluate Division.
 // Memory Usage: 37.9 MB, less than 62.65% of Java online submissions for Evaluate Division.
+//number of equations is N, number of queries is M
+// TC: 
+// build the graph 2*N
+// for each of M queries, traverse the whole graph -> M*2N
+// Total: O(M*N)
+// SC: 
+// map: 2*N + N edges = 3N
+// visited: 2*N
+// result list: M
+// recursion stack space: 2N
+// Toal: 7N + M -> O(M + N)
 
 public class EvaluateDivision {
     class Edge{
