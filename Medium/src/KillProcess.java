@@ -4,6 +4,7 @@ public class KillProcess {
 
     // Runtime: 23 ms, faster than 70.17% of Java online submissions for Kill Process.
     // Memory Usage: 47.7 MB, less than 69.14% of Java online submissions for Kill Process.
+    // TC and SC: O(N)
 
     public List<Integer> killProcess(List<Integer> pid, List<Integer> ppid, int kill) {        
         // build the graph: for each node, put a list of children
