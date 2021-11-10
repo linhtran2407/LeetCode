@@ -1,3 +1,8 @@
+import java.util.*;
+
+
+// Runtime: 5 ms, faster than 54.25% of Java online submissions for Evaluate Reverse Polish Notation.
+// Memory Usage: 38.5 MB, less than 94.00% of Java online submissions for Evaluate Reverse Polish Notation.
 public class EvaluateReversePolishNotation {
     
     
