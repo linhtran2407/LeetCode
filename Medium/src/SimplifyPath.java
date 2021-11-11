@@ -1,5 +1,8 @@
 import java.util.*;
 
+// Runtime: 3 ms, faster than 96.18% of Java online submissions for Simplify Path.
+// Memory Usage: 39.3 MB, less than 55.58% of Java online submissions for Simplify Path.
+
 public class SimplifyPath {
     public String simplifyPath(String path) {
         String[] strings = path.split("/");
