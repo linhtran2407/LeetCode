@@ -1,5 +1,4 @@
 public class WordBreak {
-    
         public boolean wordBreak(String s, List<String> wordDict) {
             // dp
             // suppose opt[k] is the substring from start to k (k < len-1) that we know is segmentable
