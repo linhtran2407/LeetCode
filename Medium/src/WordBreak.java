@@ -1,6 +1,6 @@
 public class WordBreak {
         public boolean wordBreak(String s, List<String> wordDict) {
-            // dp
+            // dynamic programming
             // suppose opt[k] is the substring from start to k (k < len-1) that we know is segmentable
             // return true if the substring [k+1, len) is contained in the word dictionary
             // recurrence:
