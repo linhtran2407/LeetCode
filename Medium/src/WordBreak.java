@@ -17,6 +17,8 @@ public class WordBreak {
                 // false, otherwise
             
             // TC: O(N^2)
+                // Note: if consider substring computation (subString method) used takes O(N),
+                // then TC is O(N^3)
             // SC: O(N)
             
             // build word dict
