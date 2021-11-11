@@ -1,5 +1,9 @@
 import java.util.*;
 
+// Runtime: 6 ms, faster than 66.80% of Java online submissions for Word Break.
+// Memory Usage: 39.5 MB, less than 44.46% of Java online submissions for Word Break.
+
+
 public class WordBreak {
         public boolean wordBreak(String s, List<String> wordDict) {
             // dynamic programming solution
