@@ -30,4 +30,16 @@ public class ReverseLinkedList {
         }
         return prev;
     }
+
+    public ListNode reverseRecursion (ListNode head){
+        if (head == null || head.next == null){
+            return head;
+        }
+
+        ListNode reversed = reverseRecursion(head.next);
+        head.next.next = reversed;
+        head.next = null;
+
+        return reversed;
+    }
 }
