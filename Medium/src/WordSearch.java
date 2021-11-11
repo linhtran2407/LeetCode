@@ -1,5 +1,6 @@
 public class WordSearch {
-    
+//     Runtime: 103 ms, faster than 62.86% of Java online submissions for Word Search.
+// Memory Usage: 37.3 MB, less than 51.62% of Java online submissions for Word Search.
         private char[][] board;
         private int numRows;
         private int numCols;
