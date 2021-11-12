@@ -1,6 +1,7 @@
 public class RemoveLinkedListElements {
  
- 
+    // Runtime: 1 ms, faster than 79.34% of Java online submissions for Remove Linked List Elements.
+    // Memory Usage: 39.9 MB, less than 63.59% of Java online submissions for Remove Linked List Elements.
  public class ListNode {
      int val;
      ListNode next;
