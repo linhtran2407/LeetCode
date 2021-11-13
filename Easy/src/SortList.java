@@ -1,4 +1,8 @@
 public class SortList {
+
+    // Runtime: 6 ms, faster than 86.34% of Java online submissions for Sort List.
+// Memory Usage: 47.6 MB, less than 56.53% of Java online submissions for Sort List.
+
     public class ListNode {
         int val;
         ListNode next;
