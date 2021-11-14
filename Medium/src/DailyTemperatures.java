@@ -1,5 +1,8 @@
 import java.util.*;
 
+// Runtime: 36 ms, faster than 57.32% of Java online submissions for Daily Temperatures.
+// Memory Usage: 55 MB, less than 36.03% of Java online submissions for Daily Temperatures.
+
 public class DailyTemperatures {
     public class Pair{
         int val;
