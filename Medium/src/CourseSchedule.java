@@ -41,7 +41,7 @@ class Solution {
         // build the graph
         for (int[] relation: prerequisites){
             // relation[1] --> relation[0]
-            var depList = courseDict.getOrDefault(relation[1], new ArrayList<Integer>());
+            ArrayList<Integer> depList = courseDict.getOrDefault(relation[1], new ArrayList<Integer>());
             depList.add(relation[0]);
             courseDict.put(relation[1], depList);
             indegrees[relation[0]]++;

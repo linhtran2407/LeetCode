@@ -21,7 +21,7 @@ public class CourseScheduleII {
         // build the map and indegree array
         for (int[] relation: prerequisites){
             // pre[1] --> pre[0]
-            var depList = map.getOrDefault(relation[1], new ArrayList<Integer>());
+            List<Integer> depList = map.getOrDefault(relation[1], new ArrayList<Integer>());
             depList.add(relation[0]);
             map.put(relation[1], depList);
             indegree[relation[0]]++;
